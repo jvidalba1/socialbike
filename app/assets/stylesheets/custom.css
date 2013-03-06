@@ -1,0 +1,183 @@
+@import "bootstrap";
+
+/* universal */
+
+.btn_crear_cuenta{
+    border-bottom: 1px solid gray;
+    width: 30%;
+    margin-left: 35%;
+}
+
+.gravatar{
+    padding-left: 75px;
+}
+
+.changePhoto{
+    padding-left: 123px;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    padding-top: 17%;
+}
+
+section {
+    overflow: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.center {
+    text-align: center;
+}
+
+.center h1 {
+    margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.7em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: #999;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+
+.alert-success{
+    text-align: center;
+    font-size: 200%;
+}
+
+/* header */
+.logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* footer */
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid black;
+    color: #999;
+}
+
+footer a {
+    color: #555;
+}
+
+footer a:hover {
+    color: #222;
+}
+
+footer small {
+    float: left;
+}
+
+footer ul {
+    float: right;
+    list-style: none;
+}
+
+footer ul li {
+    float: left;
+    margin-left: 10px;
+}
+
+/* user show page */
+
+table.profile {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+td.main{
+    width: 70%;
+    padding: 1em,
+}
+
+td.sidebar{
+    width: 30%;
+    padding: 1em;
+    vertical-align: top;
+    background: #C0C0C0;
+}
+
+.profile img.gravatar{
+    border: 1px solid #999;
+    margin-bottom: -15px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+
+}
+
+input {
+    height: auto !important;
+}
+
+/* users index */
+
+.users {
+    list-style: none;
+    margin: 0;
+}
+li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid lightgray;
+
+    &:last-child{
+    border-bottom: 1px solid lightgray;
+}
+}
+
+
+
+
+
+
