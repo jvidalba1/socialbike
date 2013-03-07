@@ -17,18 +17,18 @@ class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation
 
 
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  validates :name,		:presence 		=> true,
-            :length   		    => { :maximum => 50 }
+  validates :name,		:presence 		  => { :message => " -Debes ingresar un nombre"},
+                      :length   		  => { :maximum => 50, :message => " -Nombre maximo de 50 caracteres" }
 
-  validates :email, 	:presence 		=> true,
-            :format 			    => { :with => email_regex },
-            :uniqueness 	    => { :case_sensitive => false }
+  validates :email, 	:presence 		  => { :message => " -Debes ingresar un email"},
+                      :format 			  => { :with => EMAIL_REGEX, :message => " -Formato de email invalido" },
+                      :uniqueness 	  => { :case_sensitive => false, :message => " -Este email ya existe" }
 
-  validates :password, :presence 		=> true,
-            :confirmation 	=> true,
-            :length			=> { :within => 6..40 }
+  validates :password, :presence 		  => { :message => "Ingresa una contrasenia"},
+                       :confirmation 	=> { :message => " -Confirmacion mala"},
+                       :length			  => { :within => 6..40, :message => "Min 6 y Max 40" }
 
   before_save :encrypt_password
 

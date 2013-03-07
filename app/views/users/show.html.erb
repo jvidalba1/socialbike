@@ -1,0 +1,28 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td>
+      <h1>
+        <%= @user.name %>
+      </h1>
+    </td>
+    <td class ="sidebar round" >
+      <strong>
+        Nombre
+      </strong>
+      <%= @user.name%>
+      <br>
+      <strong>
+        URL
+      </strong>
+      <%= link_to user_path(@user), "/users/#{@user.id}"%>
+      <br>
+      <strong>
+        Email
+      </strong>
+      <%= @user.email %>
+      <br>
+      <%= link_to "Editar informacion", edit_user_path(@user) %>
+    </td>
+
+  </tr>
+</table>

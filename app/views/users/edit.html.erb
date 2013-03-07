@@ -1,0 +1,38 @@
+<h1>Edit user</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+
+        <% if @user.errors.any? %>
+            <div id="error_explanation">
+              <div class="alert alert-error">
+                El formulario contiene <%= pluralize(@user.errors.count, "errore") %>.
+              </div>
+              <ul>
+                <% @user.errors.full_messages.each do |error_msg| %>
+                    <li>
+                      <%= error_msg %>
+                    </li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+        <%= f.label :name, "Nombre" %>
+        <%= f.text_field :name %>
+
+        <%= f.label :email, "Email" %>
+        <%= f.text_field :email %>
+
+        <%= f.label :password, "Contraseña" %>
+        <%= f.password_field :password %>
+
+        <%= f.label :password_confirmation, "Confirmar" %>
+        <%= f.password_field :password_confirmation %>
+
+        <br/>
+        <%= f.submit "Actualizar", :class => "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
