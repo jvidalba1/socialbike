@@ -1,15 +1,16 @@
-@import "bootstrap";
+
+@import 'bootstrap.css';
 
 /* universal */
 
 .btn_crear_cuenta{
     border-bottom: 1px solid gray;
     width: 30%;
-    margin-left: 35%;
 }
 
 .gravatar{
     padding-left: 75px;
+    margin-left: 14%;
 }
 
 .changePhoto{
@@ -22,6 +23,49 @@ html {
 
 body {
     padding-top: 17%;
+
+  .buscador{
+    width: 30%;
+    margin-left: 14%;
+  }
+
+  .apple_pagination {
+
+    background: rgb(211, 204, 204);
+    border: 1px solid rgb(197, 192, 192);
+    text-align: center;
+    padding-top: 7px;
+    cursor: default;
+    width: 70%;
+    margin-left: 14%;
+    border-radius: 100px;
+  }
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em;
+  }
+  .apple_pagination .disabled {
+    color: #aaaaaa;
+  }
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: #bebebe;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+  }
+  .apple_pagination a {
+    text-decoration: none;
+    color: black;
+  }
+  .apple_pagination a:hover, .apple_pagination a:focus {
+    text-decoration: underline;
+  }
 }
 
 section {
@@ -33,7 +77,7 @@ textarea {
 }
 
 .center {
-    text-align: center;
+    //text-align: center;
 }
 
 .center h1 {
@@ -67,11 +111,6 @@ p {
     line-height: 1.7em;
 }
 
-.alert-success{
-    text-align: center;
-    font-size: 200%;
-}
-
 /* header */
 .logo {
     float: left;
@@ -83,6 +122,15 @@ p {
     padding-top: 9px;
     font-weight: bold;
     line-height: 1;
+}
+.contenido{
+
+    .alert{
+      text-align: center;
+      width: 50%;
+      margin-left: 23%;
+      font-size: 25px;
+    }
 }
 
 .logo:hover {
@@ -127,11 +175,12 @@ footer ul li {
 table.profile {
     width: 80%;
     margin-bottom: 0;
+    margin-left: 4.5%;
 }
 
 td.main{
     width: 70%;
-    padding: 1em,
+    padding: 1em;
 }
 
 td.sidebar{
@@ -139,6 +188,7 @@ td.sidebar{
     padding: 1em;
     vertical-align: top;
     background: #C0C0C0;
+  border-radius: 8px;
 }
 
 .profile img.gravatar{
@@ -166,16 +216,27 @@ input {
     list-style: none;
     margin-left: 100px;
     padding: 60px;
-}
-li {
+
+  .gravatar_index{
+    padding-left: 0px;
+    margin-left: -20%;
+  }
+
+  a{
+    float: right;
+  }
+
+  li {
     overflow: auto;
     padding: 0px 0;
     border-bottom: 1px solid white;
 
     &:last-child{
-    border-bottom: 1px solid lightgray;
+      border-bottom: 1px solid white;
+    }
+  }
 }
-}
+
 
 
 

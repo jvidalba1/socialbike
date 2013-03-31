@@ -19,11 +19,11 @@ class User < ActiveRecord::Base
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  validates :name,		:presence 		  => { :message => " -Debes ingresar un nombre"},
-                      :length   		  => { :maximum => 50, :message => " -Nombre maximo de 50 caracteres" }
+  validates :name,		:presence 		  => true,
+                      :length   		  => { :maximum => 50}
 
-  validates :email, 	:presence 		  => { :message => " -Debes ingresar un email"},
-                      :format 			  => { :with => EMAIL_REGEX, :message => " -Formato de email invalido" },
+  validates :email, 	:presence 		  => true,
+                      :format 			  => { :with => EMAIL_REGEX},
                       :uniqueness 	  => { :case_sensitive => false, :message => " -Este email ya existe" }
 
   validates :password, :presence 		  => { :message => "Ingresa una contrasenia"},
@@ -31,6 +31,13 @@ class User < ActiveRecord::Base
                        :length			  => { :within => 6..40, :message => "Min 6 y Max 40" }
 
   before_save :encrypt_password
+
+  def self.search_user(search, page)
+
+    paginate :per_page => 5, :page => page,
+             :conditions => ['name like ?',"%#{search}%"],
+             :order => 'name'
+  end
 
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)

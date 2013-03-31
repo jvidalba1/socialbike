@@ -2,8 +2,7 @@
 <html>
 <head>
   <title><%= baseTitle %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -32,6 +31,13 @@
     </div>
   </div>
 </header>
+<div class="contenido">
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value.capitalize %>
+      </div>
+  <% end %>
+</div>
 <%= yield %>
 -
 </body>
