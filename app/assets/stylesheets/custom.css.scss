@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    padding-top: 17%;
+    padding-top: 0%;
 
   .buscador{
     width: 30%;
@@ -236,6 +236,16 @@ input {
     }
   }
 }
+
+  #footers{
+    clear: both;
+    background: url("complete_footer.png") left top repeat-x;
+    height: 170px;
+    background-color: white;
+    padding-bottom: 0px;
+    margin-top: 60px;
+  }
+
 
 
 
