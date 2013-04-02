@@ -13,3 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function(){
+    $('.alert-success').change(function(){
+        $('.alert-success').slideUp("slow");
+    });
+});

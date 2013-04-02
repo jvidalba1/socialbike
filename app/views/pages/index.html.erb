@@ -1,16 +1,27 @@
 <center>
 <div class="center hero-unit">
   <br>
+  <% if !signed_in? %>
   <h1>Bienvenido</h1>
   <h4>¿Ya est&aacute;s disfrutanto del maravilloso mundo de SocialBike?</h4>
   <br>
-  <%= link_to "Crea tu cuenta gratis!", new_user_path, :class => "btn btn-large btn-primary" %>
-  <hr class="btn_crear_cuenta">
+    <%= link_to "Crea tu cuenta gratis!", new_user_path, :class => "btn btn-large btn-primary" %>
+    <hr class="btn_crear_cuenta">
+    <%= link_to "Login", signin_path, :class => "btn btn-large btn-primary" %>
+  <% else %>
+      <h1>Invita a tus amigos</h1>
+      <h2>Email</h2>
+      <%= text_field_tag('invitacion') %>
+      <br>
+      <br>
+      <br>
+      <br>
 
-  <%= link_to "Login", signin_path, :class => "btn btn-large btn-primary" %>
+
+  <% end %>
+
 
 </div>
-
 
   <div id="footers">
     <div class="footer1">

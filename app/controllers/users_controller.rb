@@ -22,8 +22,10 @@ class UsersController < ApplicationController
       flash[:success] = "Bienvenido a SocialBike"
       redirect_to user_path(@user)
     else
-      render 'new'
+      flash[:alert] = "Error"
       @title = "Nuevo usuario"
+      render 'new'
+
     end
   end
 
@@ -37,9 +39,10 @@ class UsersController < ApplicationController
 
     if @user.update_attributes(params[:user])
 
-      flash[:success] = "Your data were updated successfully"
+      flash[:success] = "Datos actualizados"
       redirect_to @user
     else
+      flash[:alert] ="Error"
       @title = "Edit user"
       render 'edit'
     end
