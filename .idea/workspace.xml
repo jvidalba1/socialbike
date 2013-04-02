@@ -53,19 +53,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="static_pages_spec.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="static_pages_spec.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/requests/static_pages_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="58" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
+            <state line="12" column="23" selection-start="225" selection-end="225" vertical-scroll-proportion="0.28892455">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sample_data.rake" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sample_data.rake" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="23" selection-start="166" selection-end="171" vertical-scroll-proportion="0.14446227">
+            <state line="6" column="23" selection-start="166" selection-end="171" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -739,16 +739,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/requests/static_pages_spec.rb">
+    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="58" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
+        <state line="6" column="23" selection-start="166" selection-end="171" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
+    <entry file="file://$PROJECT_DIR$/spec/requests/static_pages_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="166" selection-end="171" vertical-scroll-proportion="0.14446227">
+        <state line="12" column="23" selection-start="225" selection-end="225" vertical-scroll-proportion="0.28892455">
           <folding />
         </state>
       </provider>
