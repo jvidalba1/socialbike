@@ -8,13 +8,14 @@
 <body>
 
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
+  <div class="navbar-inner ">
     <div class="container">
       <center>
         <%= link_to (image_tag("sb.png")), root_path, :id => "logo" %>
       </center>
       <nav>
         <ul class="nav pull-right">
+
           <li><%= link_to "Inicio", root_path %></li>
           <% if signed_in? %>
               <li><%= link_to "Usuarios", users_path %></li>

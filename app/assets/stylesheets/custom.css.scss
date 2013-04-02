@@ -18,6 +18,12 @@ html {
     overflow-y: scroll;
 }
 
+.navbar-inverse .nav > .inicio_menu > li > a:hover {
+  /*este es el menu*/
+  color: #fff;
+  background-color: transparent;
+}
+
 body {
     padding-top: 0%;
 
@@ -158,7 +164,7 @@ footer small {
 }
 
 footer ul {
-    float: right;
+    float: left;
     list-style: none;
 }
 
@@ -241,6 +247,27 @@ input {
     background-color: white;
     padding-bottom: 0px;
     margin-top: 60px;
+
+    .footer1{
+      border-left: 10px red;
+      color: black;
+
+      ul{
+        list-style: none;
+        border-left: 2px white;
+        border-color: white;
+        padding-left: 190px;
+        padding-top: 50px;
+        font-size: 16px;
+      }
+      a{
+        text-align: left;
+
+        display: block;
+        color: white;
+      }
+
+    }
   }
 
 
