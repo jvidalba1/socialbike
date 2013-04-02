@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_filter :signed_in_user,  :only => [:index, :edit, :update, :destroy]
+  before_filter :signed_in_user,  :only => [:index, :edit, :update, :destroy, :show]
   before_filter :correct_user,    :only => [:edit]
 
   def show
@@ -70,7 +70,7 @@ class UsersController < ApplicationController
 
   def deny_access
     store_location
-    flash[:danger] = "Please sign in"
+    flash[:danger] = "Acceso restringido"
     redirect_to signin_path
   end
 
