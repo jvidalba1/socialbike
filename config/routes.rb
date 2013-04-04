@@ -5,6 +5,7 @@ Socialbike::Application.routes.draw do
 
   resources :sessions, :only => [:new, :create, :destroy]
   resources :users
+  resources :pages
 
   match '/signup',		:to => 'users#new'
   match '/signin',    :to => 'sessions#new'

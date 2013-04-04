@@ -6,6 +6,7 @@ group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem 'capybara', '1.1.2'
   gem 'sqlite3'
+  gem 'factory_girl_rails', '4.1.0'
 end
 
 group :production do
