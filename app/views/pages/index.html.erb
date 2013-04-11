@@ -9,15 +9,17 @@
     <hr class="btn_crear_cuenta">
     <%= link_to "Login", signin_path, :class => "btn btn-large btn-primary" %>
   <% else %>
-      <h1>Invita a tus amigos</h1>
-      <h2>Email</h2>
-      <%= text_field_tag('invitacion') %>
-      <%# link_to "Enviar invitacion", page_path %>
-      <br>
-      <br>
-      <br>
-      <br>
+      <%= form_tag({:action => 'oelo'})%>
 
+          <h1>Invita a tus amigos</h1>
+          <h2>Email</h2>
+          <h2 style="font-size: 15px; margin-top: -25px;">Puedes incluir varios correos separados por coma</h2>
+          <%= text_field_tag("email", "user")  %>
+          <%= submit_tag "Enviar invitacion", :class => "btn btn-large btn-primary"%>
+          <br>
+          <br>
+          <br>
+          <br>
 
   <% end %>
 

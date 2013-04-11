@@ -2,7 +2,19 @@ class PagesController < ApplicationController
 
   def index
     @title = "Inicio"
-    #UserMailer.registration_confirmation(@usuario,params[:usuario][:clave]).deliver
+  end
+
+  def oelo
+    email = params[:email] rescue nil
+
+    emails = email.gsub(" ","").split(",")
+    p "+++++++++++++++++++++++++#{@current_user.name}"
+    emails.each do |email_to_send|
+      UserMailer.registration_confirmation(email_to_send).deliver
+    end
+
+    flash[:success] = "Invitacion enviada"
+    render :action => 'index'
   end
 
   def contact

@@ -1,9 +1,8 @@
 class UserMailer < ActionMailer::Base
-  default :from => "jvidalba@gmail.com"
+  default :from => "example@example.com"
 
-  def registration_confirmation(user, pass)
-    @usuario =   user
-    @pass = pass
-    mail(:to => user.email, :subject => "Invitacion")
+  def registration_confirmation(email)
+
+    mail(:to => email, :subject => "testing")
   end
 end
