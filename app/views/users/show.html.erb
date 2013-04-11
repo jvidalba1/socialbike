@@ -24,6 +24,8 @@
       <br>
       <% if current_user?(@user) %>
         <%= link_to "Editar informacion", edit_user_path(@user) %>
+          <br>
+        <a href="http://gravatar.com/emails/" target=_blank> Cambiar foto</a>
       <% end %>
     </td>
 
