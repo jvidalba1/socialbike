@@ -75,6 +75,12 @@ section {
     overflow: auto;
 }
 
+.video{
+  float: left;
+  padding-left: 25px;
+  box-shadow: 10px 10px 8px #333;
+}
+
 textarea {
     resize: vertical;
 }
