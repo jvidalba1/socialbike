@@ -26,7 +26,17 @@
         <%= link_to "Editar informacion", edit_user_path(@user) %>
           <br>
         <a href="http://gravatar.com/emails/" target=_blank> Cambiar foto</a>
+
       <% end %>
+      <div class="span8">
+        <% if @user.events.any? %>
+            <h3>Eventos (<%= @user.events.count %>)</h3>
+            <ol class="events">
+              <%= render @events %>
+            </ol>
+            <%= will_paginate @events %>
+        <% end %>
+      </div>
     </td>
 
   </tr>

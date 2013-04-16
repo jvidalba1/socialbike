@@ -57,4 +57,29 @@ describe User do
       end
     end
   end
+
+  describe "event associations" do
+
+    before { @user.save }
+
+    let!(:older_event) do
+      FactoryGirl.create(:event, :user => @user, :created_at => 1.day.ago)
+    end
+    let!(:newer_event) do
+      FactoryGirl.create(:event, :user => @user, :created_at => 1.hour.ago)
+    end
+
+    it "should have the right events in the right order" do
+      @user.events.should == [newer_event, older_event]
+    end
+
+    it "should destroy associated events" do
+      events = @user.events.dup
+      @user.destroy
+      events.should_not be_empty
+      events.each do |event|
+        Event.find_by_id(event.id).should be_nil
+      end
+    end
+  end
 end
