@@ -69,6 +69,203 @@ body {
   .apple_pagination a:hover, .apple_pagination a:focus {
     text-decoration: underline;
   }
+
+  .table{
+    width: 50%;
+    margin-top: 20px;
+    border-spacing: 0;
+    background: #ffffff;
+    .table_head{
+      td{
+        border-bottom: 3px solid #6678B1;
+        text-align: left;
+        font-size: 15px;
+        font-weight: normal;
+        color: #039;
+        padding: 10px 8px;
+
+      }
+    }
+    .table_body{
+      color: #669;
+      .btn_primary_danger{
+        color: rgb(179, 54, 48);
+      }
+
+      &:hover{
+        background: #002E74;
+        color: #ffffff;
+        a{
+
+          &:hover{
+            color: #ffffff;
+            text-decoration: none;
+          }
+        }
+      }
+      td{
+
+        .btn_primary, .btn_primary_option, .minibutton{
+          color: #333;
+        }
+        .btn_primary_danger, .minibutton_danger{
+          color: rgb(179, 54, 48);
+        }
+
+        border-bottom: 1px solid #CCC;
+        padding: 6px 8px;
+        a{
+          text-decoration: none;
+          color: #669;
+        }
+
+      }
+    }
+  }
+
+  .button_group{
+    font-size: 10px;
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    ul{
+      -webkit-padding-start: 0;
+      li{
+        list-style: none;
+        display: table-cell;
+
+        .minibutton{
+          padding: 0 10px;
+          display: block;
+          text-align: center;
+          line-height: 20px;
+          text-decoration: none;
+          position: relative;
+          color: #333;
+          text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+          white-space: nowrap;
+          background-color: #eaeaea;
+          background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+          background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+          background-image: linear-gradient(#fafafa, #eaeaea);
+          background-image: -ms-linear-gradient(#fafafa, #eaeaea);
+          background-repeat: repeat-x;
+          border: 1px solid #ddd;
+          border-bottom-color: #c5c5c5;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.075);
+          vertical-align: middle;
+          cursor: pointer;
+          &:hover{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+            background-color: rgb(48, 114, 179);
+            background-image: -webkit-linear-gradient(top, rgb(89, 155, 205), rgb(48, 114, 179));
+            background-image: -moz-linear-gradient(top, rgb(89, 155, 205), rgb(48, 114, 179));
+            background-image: linear-gradient(top, rgb(89, 155, 205), rgb(48, 114, 179));
+            border-color: rgb(42, 101, 160);
+            background-repeat: repeat no-repeat;
+          }
+
+          &:active{
+            background-color: rgb(48, 114, 179);
+            background-image: none;
+            border-color: rgb(37, 88, 140);
+            box-shadow: rgba(0, 0, 0, 0.14902) 0px 3px 5px inset;
+          }
+
+        }
+        &:first-child a{
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+        &:last-child .minibutton, .minibutton_danger{
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+
+        .minibutton{
+          padding: 0 10px;
+          display: block;
+          text-align: center;
+          line-height: 20px;
+          text-decoration: none;
+          position: relative;
+          color: #333;
+          text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+          white-space: nowrap;
+          background-color: #eaeaea;
+          background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+          background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+          background-image: linear-gradient(#fafafa, #eaeaea);
+          background-image: -ms-linear-gradient(#fafafa, #eaeaea);
+          background-repeat: repeat-x;
+          border: 1px solid #ddd;
+          border-bottom-color: #c5c5c5;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.075);
+          vertical-align: middle;
+          cursor: pointer;
+          &:hover{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+            background-color: rgb(48, 114, 179);
+            background-image: -webkit-linear-gradient(top, rgb(89, 155, 205), rgb(48, 114, 179));
+            background-image: -moz-linear-gradient(top, rgb(89, 155, 205), rgb(48, 114, 179));
+            background-image: linear-gradient(top, rgb(89, 155, 205), rgb(48, 114, 179));
+            border-color: rgb(42, 101, 160);
+            background-repeat: repeat no-repeat;
+          }
+
+          &:active{
+            background-color: rgb(48, 114, 179);
+            background-image: none;
+            border-color: rgb(37, 88, 140);
+            box-shadow: rgba(0, 0, 0, 0.14902) 0px 3px 5px inset;
+          }
+        }
+        .minibutton_danger{
+          color: rgb(179, 54, 48);
+          padding: 0 10px;
+          line-height: 20px;
+          display: block;
+          text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+          white-space: nowrap;
+          background-color: #eaeaea;
+          background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+          background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+          background-image: linear-gradient(#fafafa, #eaeaea);
+          background-image: -ms-linear-gradient(#fafafa, #eaeaea);
+          background-repeat: repeat-x;
+          border: 1px solid #ddd;
+          border-bottom-color: #c5c5c5;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.075);
+          vertical-align: middle;
+          cursor: pointer;
+
+          &:hover{
+            color: rgb(255, 255, 255);
+            text-shadow: rgba(0, 0, 0, 0.298039) 0px -1px 0px;
+            background-color: rgb(179, 54, 48);
+            background-image: -webkit-linear-gradient(top, rgb(220, 95, 89), rgb(179, 54, 48));
+            background-image: -moz-linear-gradient(top, rgb(220, 95, 89), rgb(179, 54, 48));
+            background-image: linear-gradient(top, rgb(220, 95, 89), rgb(179, 54, 48));
+            border-color: rgb(205, 80, 74);
+            background-repeat: repeat no-repeat;
+
+          }
+
+          &:active{
+            color: rgb(255, 255, 255);
+            background-color: rgb(179, 54, 48);
+            background-image: none;
+            border-color: rgb(159, 49, 44);
+          }
+        }
+      }
+    }
+  }
 }
 
 section {

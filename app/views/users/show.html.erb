@@ -1,4 +1,4 @@
-<table class="profile" summary="Profile information">
+<table class="profile" summary="Profile information" border=1>
   <%= gravatar_for @user, :size => 150 	%>
   <tr>
     <td>
@@ -28,16 +28,35 @@
         <a href="http://gravatar.com/emails/" target=_blank> Cambiar foto</a>
 
       <% end %>
-      <div class="span8">
-        <% if @user.events.any? %>
-            <h3>Eventos (<%= @user.events.count %>)</h3>
-            <ol class="events">
-              <%= render @events %>
-            </ol>
-            <%= will_paginate @events %>
-        <% end %>
-      </div>
     </td>
-
-  </tr>
+    </tr>
 </table>
+
+<h2>Eventos (<%= @user.events.count %>)</h2>
+<table class="table">
+  <tr class="table_head">
+    <td>Nombre</td>
+    <td>Creacion</td>
+    <td colspan="2">Opciones</td>
+  </tr>
+<% @events.each do |event| %>
+  <tr class="table_body">
+            <td>
+              <%= event.name %>
+            </td>
+            <td>
+                Posted <%= time_ago_in_words(event.created_at) %> ago.
+            </td>
+   <td>
+    <div class="button_group">
+      <ul>
+        <li><%= link_to "Ver",  "#", :class => "minibutton"%></li>
+        <li><%= link_to "Editar", "#", :class => "minibutton" %></li>
+        <li><%= link_to "Cancelar", "#", :method => :delete, :confirm => "¿Esta seguro?", :class => "minibutton_danger" %></li>
+      </ul>
+    </div>
+   </td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @events %>

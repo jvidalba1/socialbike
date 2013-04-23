@@ -1,6 +1,10 @@
-<li>
-  <span class="content"><%= event.name %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(event.created_at) %> ago.
-  </span>
-</li>
+<td>
+  <li><span class="content"><%= event.name %></span></li>
+</td>
+<td>
+  <li>
+      <span class="timestamp">
+        Posted <%= time_ago_in_words(event.created_at) %> ago.
+      </span>
+  </li>
+</td>
