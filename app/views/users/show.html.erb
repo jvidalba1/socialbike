@@ -1,4 +1,4 @@
-<table class="profile" summary="Profile information" border=1>
+<table class="profile" summary="Profile information">
   <%= gravatar_for @user, :size => 150 	%>
   <tr>
     <td>
@@ -32,14 +32,19 @@
     </tr>
 </table>
 
-<h2>Eventos (<%= @user.events.count %>)</h2>
-<table class="table">
+
+<table id="table_event" class="table">
+  <tr>
+    <td></td>
+    <td><h2>Eventos (<%= @user.events.count %>)</h2></td>
+    <td></td>
+  </tr>
   <tr class="table_head">
     <td>Nombre</td>
     <td>Creacion</td>
     <td colspan="2">Opciones</td>
   </tr>
-<% @events.each do |event| %>
+    <% @events.each do |event| %>
   <tr class="table_body">
             <td>
               <%= event.name %>
@@ -57,6 +62,47 @@
     </div>
    </td>
   </tr>
-<% end %>
+
+    <% end %>
+  <tr>
+    <td colspan="3"><%= will_paginate @events %></td>
+  </tr>
 </table>
-<%= will_paginate @events %>
+
+<table id="table_blog" class="table">
+  <tr>
+    <td></td>
+    <td><h2>Blog (<%# @user.blogs.count %>)</h2></td>
+    <td></td>
+  </tr>
+  <tr class="table_head">
+    <td>Nombre</td>
+    <td>Creacion</td>
+    <td colspan="2">Opciones</td>
+  </tr>
+  <%# @blogs.each do |event| %>
+      <tr class="table_body">
+        <td>
+          <%# event.name %>
+        </td>
+        <td>
+          Posted <%# time_ago_in_words(event.created_at) %> ago.
+        </td>
+        <td>
+          <div class="button_group">
+            <ul>
+              <li><%= link_to "Ver",  "#", :class => "minibutton"%></li>
+              <li><%= link_to "Editar", "#", :class => "minibutton" %></li>
+              <li><%= link_to "Cancelar", "#", :method => :delete, :confirm => "¿Esta seguro?", :class => "minibutton_danger" %></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+
+  <%# end %>
+  <tr>
+    <td colspan="3"><%= will_paginate @events %></td>
+  </tr>
+</table>
+
+

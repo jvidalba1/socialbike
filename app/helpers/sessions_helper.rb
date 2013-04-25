@@ -1,5 +1,20 @@
 module SessionsHelper
 
+  def signed_in_user
+    deny_access unless signed_in?
+  end
+
+  def deny_access
+    store_location
+    flash[:danger] = "Acceso restringido"
+    redirect_to signin_path
+  end
+
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(user_path(@current_user)) unless current_user?(@user)
+  end
+
   def sign_in(user)
     cookies.permanent.signed[:remember_token] = [user.id, user.salt]
     @current_user = user

@@ -1,12 +1,11 @@
 Socialbike::Application.routes.draw do
 
-
-
-
   resources :sessions, :only => [:new, :create, :destroy]
   resources :users
   resources :pages
-    get 'oelo', :to => 'pages#oelo'
+  resources :events, :only => [:create, :destroy]
+
+  get 'oelo', :to => 'pages#oelo'
 
 
   match '/oelo',      :to => 'pages#oelo'

@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @events = @user.events.paginate(:page => params[:page])
+    @events = @user.events.paginate(:per_page => 10, :page => params[:page])
     @title = @user.name
   end
 
@@ -63,20 +63,4 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
-  private
-
-  def signed_in_user
-    deny_access unless signed_in?
-  end
-
-  def deny_access
-    store_location
-    flash[:danger] = "Acceso restringido"
-    redirect_to signin_path
-  end
-
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to(user_path(@current_user)) unless current_user?(@user)
-  end
 end
