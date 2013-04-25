@@ -7,6 +7,7 @@ group :test, :development do
   gem 'capybara', '1.1.2'
   gem 'sqlite3'
   gem 'factory_girl_rails', '4.1.0'
+  gem 'nokogiri'
 end
 
 group :production do

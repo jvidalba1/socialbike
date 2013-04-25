@@ -9,7 +9,7 @@ describe "Authentication" do
               describe "in the events controller" do
 
                 describe "submitting to the create action" do
-                  before { post events_path }
+                  before { post event_path }
                   specify { response.should redirect_to(signin_path) }
                 end
 

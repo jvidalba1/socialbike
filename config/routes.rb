@@ -3,7 +3,9 @@ Socialbike::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
   resources :users
   resources :pages
-  resources :events, :only => [:create, :destroy]
+  resources :events
+
+  match '/events/new', :to => 'events#new'
 
   get 'oelo', :to => 'pages#oelo'
 
