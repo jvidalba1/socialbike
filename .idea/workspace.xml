@@ -50,7 +50,7 @@
     <file path="$PROJECT_DIR$/../sps_portal/app/views/erp/cuentas/index.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1366692645111" ignored="false" />
     <file path="/authentication_pages_spec.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1366867599279" ignored="false" />
     <file path="/events_controller.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1366867880374" ignored="false" />
-    <file path="/.travis.yml" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1366904351059" ignored="false" />
+    <file path="/.travis.yml" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1366904600845" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,7 @@
       <file leaf-file-name=".travis.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="23" selection-start="54" selection-end="54" vertical-scroll-proportion="0.047923323">
+            <state line="4" column="34" selection-start="132" selection-end="132" vertical-scroll-proportion="0.095846646">
               <folding />
             </state>
           </provider>
@@ -1097,7 +1097,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="54" selection-end="54" vertical-scroll-proportion="0.047923323">
+        <state line="4" column="34" selection-start="132" selection-end="132" vertical-scroll-proportion="0.095846646">
           <folding />
         </state>
       </provider>
