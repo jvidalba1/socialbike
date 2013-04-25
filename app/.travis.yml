@@ -1,5 +1,5 @@
 language: ruby
 before_install:
-                - bundle install
-                - rake db:migrate
-                - bundle exec rake
+  - bundle install
+  - rake db:migrate
+  - bundle exec rake
