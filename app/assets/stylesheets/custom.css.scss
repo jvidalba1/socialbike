@@ -27,6 +27,35 @@ html {
 body {
     padding-top: 0%;
 
+  .section_perfil_event{
+    margin-left: 100px;
+  }
+
+  .section_event_form
+  {
+    margin-left: 35%;
+
+    h2{
+      margin-left: -40%;
+    }
+    input{
+      width: 500px;
+    }
+
+    #event_description{
+      width: 500px;
+      height: 150px;
+    }
+  }
+  .nombre_enew{
+    height: 0px;
+    padding-top: 21px;
+  }
+
+  .foto_events_new{
+    padding-right: 30px;
+  }
+
   .buscador{
     width: 30%;
     margin-left: 14%;
