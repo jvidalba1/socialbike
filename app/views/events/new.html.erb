@@ -34,7 +34,18 @@
 <section class="section_event_form">
   <h2>Crear un evento</h2>
   <%= form_for @event do |f| %>
-      <%# render 'shared/error_messages', object: f.object %>
+      <% if @event.errors.any? %>
+          <div id="error_explanation">
+            <div class="alert alert-error">
+              The form contains <%= pluralize(@event.errors.count, "errore") %>.
+            </div>
+            <ul>
+              <% @event.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
       <div class="field">
         <%= f.label :name, "Nombre" %>
         <%= f.text_field :name, :placeholder => "Nombre del evento..." %>
