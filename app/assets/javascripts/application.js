@@ -15,13 +15,13 @@
 //= require_tree .
 
 $(function(){
-    $('.contenido').change(function(){
-        $('.contenido').slideUp("slow");
+    $('.alert').change(function(){
+        $('.alert').slideUp("slow");
     });
 });
 
 $(function(){
-    setTimeout($(".contenido").fadeOut(5500),9500);
+    setTimeout($(".alert").fadeOut(4500),9500);
 });
 
 $('.oelo').click(function () {

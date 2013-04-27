@@ -495,15 +495,17 @@ input {
   padding-left: 15px;
   color: #fff;
   font-size: 14px;
-  background-color: rgb(25, 196, 22);
+  background-color: rgb(242, 247, 240);
   background-image: -moz-linear-gradient(rgb(25, 196, 22));
   background-image: -webkit-linear-gradient(rgb(25, 196, 22));
   background-image: linear-gradient(rgb(25, 196, 22));
   background-repeat: repeat-x;
-  border: 1px solid green;
-  border-bottom-color: green;
+  border: 1px solid rgb(104, 107, 104);
+  border-bottom-color: rgb(104, 107, 104);
   text-shadow: 0 -1px 0 rgba(0,0,0,0.7);
   margin-top: 87px;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
   .box1 .box2{
 
     width: 40%;
@@ -513,11 +515,8 @@ input {
 
   .box1{
     float: left;
-  }
-  .box2{
-    float: right;
-    margin-right: 200px;
-    border-left: 1px groove white;
+    margin-top: 22px;
+    margin-left: 125px;
 
     .img-rounded{
       margin-top: 1px;
@@ -530,6 +529,40 @@ input {
         text-decoration: none;
         text-align: left;
         font-size: 17px;
+        color: #726f6f;
+        a{
+          color: #726f6f;
+          &:hover{
+            color: #333;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .box2{
+    float: right;
+    margin-right: 200px;
+    border-left: 1px groove white;
+
+    .trochas_lost_img{
+      width: 90px;
+      margin-right: -107px;
+      margin-left: 66px;
+    }
+
+    .img-rounded{
+      margin-top: 1px;
+    }
+
+    ul{
+      list-style: none;
+
+      li{
+        text-decoration: none;
+        text-align: left;
+        font-size: 15px;
+        color: rgb(114, 111, 111);
       }
     }
   }
