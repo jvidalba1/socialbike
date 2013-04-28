@@ -1,0 +1,32 @@
+
+<table class="table_feed_event">
+  <tr>
+    <td><li><%= link_to gravatar_for(feed_item.user), feed_item.user %></li></td>
+    <td>
+      <li>
+        <span class="user">
+        <%= link_to feed_item.user.name, feed_item.user %>
+        </span>
+      </li>
+      <li>
+        <span class="name">
+          <%= feed_item.name %>
+        </span>
+      </li>
+      <li>
+        <span class="date">
+          <%=  feed_item.date %>
+        </span>
+      </li>
+    <td>
+    <td>
+      <li>
+        <span class="Description">
+            <%= text_area_tag 'description_text', nil, :size => "10x5"%>
+        </span>
+      </li>
+    </td>
+</table>
+
+
+

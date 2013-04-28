@@ -27,6 +27,18 @@ html {
 body {
     padding-top: 0%;
 
+  .feed_event{
+    text-align: center;
+
+    .events{
+      list-style: none;
+
+      .table_feed_events{
+        width: 598px;
+      }
+    }
+  }
+
   #event_date {
     width: 18%;
   }

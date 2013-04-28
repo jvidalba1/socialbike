@@ -18,6 +18,7 @@ class EventsController < ApplicationController
       flash[:success] = "Evento creado exitosamente"
       redirect_to root_path
     else
+      @feed_items = []
       flash[:alert] = "Hay errores en los datos de entrada"
       render :action => 'new'
 

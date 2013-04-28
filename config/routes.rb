@@ -1,8 +1,11 @@
 Socialbike::Application.routes.draw do
 
+  get "feeds/index"
+
   resources :sessions, :only => [:new, :create, :destroy]
   resources :users
   resources :pages
+  resources :feeds
 
   resources :events
 
