@@ -27,6 +27,19 @@ html {
 body {
     padding-top: 0%;
 
+  #event_date {
+    width: 18%;
+  }
+
+  #event_estado{
+    width: 25%;
+  }
+  .ui-datepicker-trigger{
+    float: right;
+    margin-right: 77%;
+    margin-top: 3px;
+  }
+
   .section_perfil_event{
     margin-left: 100px;
   }

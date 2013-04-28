@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'jquery-ui-rails'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"

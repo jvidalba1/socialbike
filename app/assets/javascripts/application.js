@@ -12,7 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require_tree .
+
+$(function() {
+       $( ".datepicker").datepicker({
+               changeMonth: true,
+               changeYear: true,
+                //yearRange: '-100:+0',
+                minDate: '1d',
+                //maxDate: '-1d',
+                showOn: "button",
+                buttonImage: "/assets/calendar.png",
+                buttonImageOnly: true,
+                dateFormat: 'yy-mm-dd'
+        });
+});
+
 
 $(function(){
     $('.alert').change(function(){
