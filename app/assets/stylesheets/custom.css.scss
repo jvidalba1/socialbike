@@ -33,8 +33,45 @@ body {
     .events{
       list-style: none;
 
-      .table_feed_events{
+      .table_feed_event{
         width: 598px;
+
+        .foto_user_event{
+          padding-top: 31px;
+        }
+
+        .info_event{
+          padding-top: 50px;
+        }
+
+        .descripcion{
+          padding-top: 44px;
+
+          .description_span{
+
+            h5{
+              margin-bottom: 0px;
+              margin-left: -74px;
+            }
+
+            textarea{
+              border: 1px solid #bbb;
+              width: 161%;
+              padding: 10px;
+              margin-bottom: 15px;
+              height: 100px;
+              max-width: 235px;
+            }
+          }
+
+        }
+
+        .complement{
+          li{
+            margin-right: -335px;
+          }
+        }
+
       }
     }
   }

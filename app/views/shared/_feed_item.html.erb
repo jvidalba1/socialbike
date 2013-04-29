@@ -1,8 +1,12 @@
 
 <table class="table_feed_event">
   <tr>
-    <td><li><%= link_to gravatar_for(feed_item.user), feed_item.user %></li></td>
-    <td>
+    <td class="foto_user_event">
+      <li>
+        <%= link_to gravatar_for(feed_item.user), feed_item.user, :class => "foto", :alt => "Foto_perfil" %>
+      </li>
+    </td>
+    <td class="info_event">
       <li>
         <span class="user">
         <%= link_to feed_item.user.name, feed_item.user %>
@@ -18,12 +22,18 @@
           <%=  feed_item.date %>
         </span>
       </li>
-    <td>
-    <td>
+    </td>
+    <td class="descripcion">
       <li>
-        <span class="Description">
-            <%= text_area_tag 'description_text', nil, :size => "10x5"%>
+        <span class="description_span">
+          <h5>Descripción</h5>
+            <%= text_area_tag 'description_text', feed_item.description, :readonly => true%>
         </span>
+      </li>
+    </td>
+    <td class="complement">
+      <li>
+        Estado: <%= select_estado_item(feed_item.estado)%> hace <%= time_ago_in_words(feed_item.updated_at) %>
       </li>
     </td>
 </table>

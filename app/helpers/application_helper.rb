@@ -16,4 +16,14 @@ module ApplicationHelper
         ["Realizado",3]
     ]
   end
+
+  def select_estado_item(estado)
+    if estado.eql? 1
+      "Confirmado"
+    elsif estado.eql? 2
+      "Cancelado"
+    elsif estado.eql? 3
+      "Realizado"
+    end
+  end
 end
