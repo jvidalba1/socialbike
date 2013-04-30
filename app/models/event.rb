@@ -15,7 +15,8 @@
 class Event < ActiveRecord::Base
   attr_accessible :date, :description, :estado, :name
 
-  belongs_to :user
+  belongs_to :user, :through => :invitations
+
   default_scope :order => 'events.created_at DESC'
 
   validates :user_id,         :presence => true
