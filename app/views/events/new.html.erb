@@ -62,6 +62,9 @@
         <%= f.label :estado, "Estado" %>
         <%= f.select :estado, options_for_select(select_estado, "estado"), :prompt => "SELECCIONE UN ESTADO"%>
       </div>
+      <div class="users">
+        <%= select_tag"invitations", options_from_collection_for_select(@users, "id", "name"), :prompt => "SELECCIONE UN USUARIO"%>
+      </div>
       <%= f.submit "Post", :class => "btn btn-large btn-primary" %>
   <% end %>
 </section>

@@ -9,6 +9,7 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     @title = "Nuevo evento"
+    @users = User.all
   end
 
   def create
