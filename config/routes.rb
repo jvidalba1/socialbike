@@ -13,7 +13,7 @@ Socialbike::Application.routes.draw do
 
   get 'oelo', :to => 'pages#oelo'
 
-
+  match '/wikiloc',    :to => 'pages#wikiloc'
   match '/oelo',      :to => 'pages#oelo'
   match '/signup',		:to => 'users#new'
   match '/signin',    :to => 'sessions#new'

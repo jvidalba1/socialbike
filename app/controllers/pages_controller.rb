@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  before_filter :signed_in_user,  :only => [:wikiloc]
+
   def index
     @title = "Inicio"
   end
@@ -22,5 +24,9 @@ class PagesController < ApplicationController
 
   def about
     @title = "Acerca de"
+  end
+
+  def wikiloc
+
   end
 end
