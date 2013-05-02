@@ -13,7 +13,7 @@
     <file path="/application_helper.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367250884183" ignored="false" />
     <file path="/custom.css" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1363537977252" ignored="false" />
     <file path="/users_controller.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1366863192633" ignored="false" />
-    <file path="/new.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367449987230" ignored="false" />
+    <file path="/new.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367450576238" ignored="false" />
     <file path="/user.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367388316980" ignored="false" />
     <file path="$PROJECT_DIR$/../rails_projects/sample_app/app/views/users/new.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1362546676393" ignored="false" />
     <file path="$PROJECT_DIR$/../rails_projects/sample_app/app/views/users/show.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1364709339119" ignored="false" />
@@ -48,7 +48,7 @@
     <file path="$PROJECT_DIR$/../sps_portal/app/assets/stylesheets/pages.css.scss" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1366692522575" ignored="false" />
     <file path="$PROJECT_DIR$/../sps_portal/app/views/erp/cuentas/index.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1366692645111" ignored="false" />
     <file path="/authentication_pages_spec.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1366867599279" ignored="false" />
-    <file path="/events_controller.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367449738183" ignored="false" />
+    <file path="/events_controller.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367453352050" ignored="false" />
     <file path="/.travis.yml" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1366905469328" ignored="false" />
     <file path="/application.js" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367126228610" ignored="false" />
     <file path="/users.js.coffee" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367039946661" ignored="false" />
@@ -57,7 +57,7 @@
     <file path="/_feed_item.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367250809753" ignored="false" />
     <file path="/feeds_controller.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367129990687" ignored="false" />
     <file path="/20130430055113_add_invitations.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367301234071" ignored="false" />
-    <file path="/invitation.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367437003986" ignored="false" />
+    <file path="/invitation.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367452896968" ignored="false" />
     <file path="/20130501192932_create_events_invitations.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367437303858" ignored="false" />
     <file path="/events_invitations.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1367438351803" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,7 +87,7 @@
       <file leaf-file-name="invitation.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/invitation.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="33" selection-start="303" selection-end="335" vertical-scroll-proportion="0.0">
+            <state line="19" column="52" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,7 +105,7 @@
       <file leaf-file-name="event.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/event.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+            <state line="24" column="26" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,10 +147,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="events_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="events_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+            <state line="32" column="41" selection-start="633" selection-end="633" vertical-scroll-proportion="0.5925297">
               <folding />
             </state>
           </provider>
@@ -165,10 +165,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/events/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="53" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.36619717">
+            <state line="67" column="43" selection-start="2227" selection-end="2227" vertical-scroll-proportion="-4.658228">
               <folding />
             </state>
           </provider>
@@ -194,12 +194,12 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/db/migrate/20130430055113_add_invitations.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/models/invitation.rb" />
         <option value="$PROJECT_DIR$/app/models/event.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130501192932_create_events_invitations.rb" />
         <option value="$PROJECT_DIR$/app/models/events_invitations.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/events/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/invitation.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
       </list>
     </option>
   </component>
@@ -702,7 +702,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958813" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3509061" sideWeight="0.6711916" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -820,13 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://DATABASE/b798bf10-73a5-4f15-9e6f-b3a7f2c80332">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -851,23 +844,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/invitation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="33" selection-start="303" selection-end="335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="31" selection-start="362" selection-end="382" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/events_invitations.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -879,16 +858,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/events/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+        <state line="67" column="43" selection-start="2227" selection-end="2227" vertical-scroll-proportion="-4.658228">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/events/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/events_invitations.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="53" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.36619717">
+        <state line="12" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/invitation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="52" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="26" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="41" selection-start="633" selection-end="633" vertical-scroll-proportion="0.5925297">
           <folding />
         </state>
       </provider>

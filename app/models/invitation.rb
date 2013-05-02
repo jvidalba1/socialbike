@@ -17,4 +17,5 @@ class Invitation < ActiveRecord::Base
 
   validates :user_id, :presence => true
 
+  default_scope :order => 'invitations.created_at DESC'
 end
