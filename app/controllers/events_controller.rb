@@ -6,6 +6,12 @@ class EventsController < ApplicationController
 
   end
 
+  def show
+
+    @event = Event.find(params[:id])
+    @title = "Evento "+@event.name
+  end
+
   def new
     @event = Event.new
     @title = "Nuevo evento"
@@ -40,7 +46,23 @@ class EventsController < ApplicationController
     end
   end
 
-  def destroy
-
+  def edit
+    @event = Event.find(params[:id])
+    @title = "Editar evento"
   end
+
+  def update
+    @event = Event.find(params[:id])
+
+    if @event.update_attributes(params[:event])
+
+      flash[:success] = "Evento actualizado"
+      redirect_to root_path
+    else
+      flash[:alert] ="Error en los datos"
+      @title = "Editar evento"
+      render 'edit'
+    end
+  end
+
 end

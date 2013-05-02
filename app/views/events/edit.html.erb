@@ -1,0 +1,42 @@
+<section class="section_event_form">
+  <h2>Editar evento</h2>
+  <%= form_for @event do |f| %>
+      <% if @event.errors.any? %>
+          <div id="error_explanation">
+            <div class="alert alert-error">
+              The form contains <%= pluralize(@event.errors.count, "errore") %>.
+            </div>
+            <ul>
+              <% @event.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+      <div class="field">
+        <%= f.label :name, "Nombre" %>
+        <%= f.text_field :name, :placeholder => "Nombre del evento..." %>
+      </div>
+      <div class="field">
+        <%= f.label :description, "Descripcion" %>
+        <%= f.text_area :description, :placeholder => "Descripcion del evento...", :rows => 10 %>
+      </div>
+      <div class="field">
+        <%= f.label :date, "Fecha del evento" %>
+        <%= f.text_field :date, :readonly => true, :class => "datepicker" %>
+      </div>
+      <div class="field">
+        <%= f.label :estado, "Estado" %>
+        <%= f.select :estado, options_for_select(select_estado, "estado"), :prompt => "SELECCIONE UN ESTADO"%>
+      </div>
+      <!--
+      <div class="users">
+        <%# fields_for "/", "users[]" do %>
+            <%# select_tag"users[]", options_from_collection_for_select(@users, "id", "name",""), :prompt => "SELECCIONE UN USUARIO"%>
+            <%# select_tag"users[]", options_from_collection_for_select(@users, "id", "name",""), :prompt => "SELECCIONE UN USUARIO"%>
+        <%# end %>
+      </div>
+      -->
+      <%= f.submit "Actualizar", :class => "btn btn-large btn-primary" %>
+  <% end %>
+</section>

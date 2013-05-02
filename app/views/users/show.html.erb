@@ -55,9 +55,8 @@
    <td>
     <div class="button_group">
       <ul>
-        <li><%= link_to "Ver",  "#", :class => "minibutton"%></li>
-        <li><%= link_to "Editar", "#", :class => "minibutton" %></li>
-        <li><%= link_to "Cancelar", "#", :method => :delete, :confirm => "¿Esta seguro?", :class => "minibutton_danger" %></li>
+        <li><%= link_to "Ver",  event_path(event), :class => "minibutton"%></li>
+        <li><%= link_to "Editar", edit_event_path(event), :class => "minibutton" %></li>
       </ul>
     </div>
    </td>

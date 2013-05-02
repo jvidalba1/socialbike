@@ -1,0 +1,58 @@
+<section class="section_perfil_event">
+  <table>
+    <tr>
+      <td rowspan="4" class="foto_events_new">
+        <a href="<%= user_path(@current_user) %>">
+          <%= gravatar_for @current_user, :size => 80 %>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2 class="nombre_enew">
+          <%= @current_user.name %>
+        </h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+            <span>
+                <%= link_to "Ver mi perfil", @current_user %>
+            </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+            <span>
+                <%= pluralize(@current_user.events.count, "event") %>
+            </span>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<section class="show_event">
+  <table class="table_show_event">
+    <tr>
+      <td><h2>Nombre</h2></td>
+      <td><%= @event.name %></td>
+    </tr>
+
+    <tr>
+      <td><h2>Descripción</h2></td>
+      <td><%= @event.description %></td>
+    </tr>
+
+    <tr>
+      <td><h2>Fecha</h2></td>
+      <td><%= @event.date %></td>
+    </tr>
+
+    <tr>
+      <td><h2>Estado</h2></td>
+      <td><%= @event.estado %></td>
+    </tr>
+  </table>
+  <%= link_to "Editar", edit_event_path(@event), :class => "btn btn-large btn-primary"  %>
+  <%= link_to "Regresar", @current_user, :class => "btn btn-large btn-primary"  %>
+</section>

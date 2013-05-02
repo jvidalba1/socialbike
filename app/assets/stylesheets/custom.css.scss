@@ -27,6 +27,36 @@ html {
 body {
     padding-top: 0%;
 
+  .show_event{
+    margin-left: 33%;
+    margin-top: 3%;
+    border: 1px solid #333;
+    border-radius: 35px;
+    margin-right: 399px;
+
+    .table_show_event{
+      color: #669;
+      width: 101%;
+
+      tr{
+        border-bottom: 1px solid #333;
+
+        td{
+          padding: 10px;
+          padding-left: 30px;
+
+          h2{
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+
+    a{
+      margin-left: 86px;
+    }
+  }
+
   .feed_event{
     text-align: center;
 
