@@ -11,9 +11,8 @@
 class Invitation < ActiveRecord::Base
 
   attr_accessible :user_id
-
   belongs_to :user
-  has_and_belongs_to_many :events
+  belongs_to :event
 
   validates :user_id, :presence => true
 
