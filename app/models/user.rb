@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
 
   has_many :events, :dependent => :destroy
   has_many :invitations
+  has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
+  has_many :followed_users, :through => :relationships, :source => :followed
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -33,6 +35,18 @@ class User < ActiveRecord::Base
                        :length			  => { :within => 6..40, :message => "Min 6 y Max 40" }
 
   before_save :encrypt_password
+
+  def following?(other_user)
+    relationships.find_by_followed_id(other_user.id)
+  end
+
+  def follow!(other_user)
+    relationships.create!(:followed_id => other_user.id)
+  end
+
+  def unfollow!(other_user)
+    relationships.find_by_followed_id(other_user.id).destroy
+  end
 
   def self.search_user(search, page)
 
