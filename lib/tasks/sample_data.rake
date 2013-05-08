@@ -1,44 +1,53 @@
-#namespace :db do
-#  desc "Fill database with sample data"
-#  task :populate => :environment do
-#    Rake::Task['db:reset'].invoke
-#
-#    99.times do |n|
-#      name      = Faker::Name.name
-#      email     = "example-#{n+1}@examplepopulate.com"
-#      password  = "password"
-#      User.create!( :name                   => name,
-#                    :email                  => email,
-#                    :password               => password,
-#                    :password_confirmation  => password)
-#    end
-#  end
-#end
-
 namespace :db do
   desc "Fill database with sample data"
 
   task :populate => :environment do
-    Rake::Task['db:reset'].invoke
+    make_users
+    make_events
+    make_relationships
+  end
 
-    99.times do |n|
-      name      = Faker::Name.name
-      email     = "example-#{n+1}@examplepopulate.com"
-      password  = "password"
-      User.create!( :name                   => name,
-                    :email                  => email,
-                    :password               => password,
-                    :password_confirmation  => password)
-    end
+end
 
-    users = User.all(:limit => 6)
-    50.times do
-      name = "Cerro"
-      description = Faker::Lorem.sentence(5)
-      date = "/04/13"
-      estado = 1
-      users.each { |user| user.events.create!(:name => name, :description => description,
-                                              :date => date, :estado => estado) }
-    end
+def make_users
+  #Rake::Task['db:reset'].invoke
+
+  99.times do |n|
+    name      = Faker::Name.name
+    email     = "example-#{n+1}@examplepopulate.com"
+    password  = "password"
+    User.create!( :name                   => name,
+                  :email                  => email,
+                  :password               => password,
+                  :password_confirmation  => password)
+  end
+end
+
+def make_events
+  #Rake::Task['db:reset'].invoke
+
+  users = User.all(:limit => 6)
+  50.times do
+    name = "Cerro"
+    description = Faker::Lorem.sentence(5)
+    date = "2013/04/13"
+    estado = 1
+    users.each { |user| user.events.create!(:name => name, :description => description,
+                                            :date => date, :estado => estado) }
+  end
+end
+
+def make_relationships
+  users = User.all
+  user  = users.first
+  followed_users = users[2..50]
+  followers      = users[3..40]
+
+  followed_users.each do |followed|
+    user.follow!(followed)
+  end
+
+  followers.each do |follower|
+    follower.follow!(user)
   end
 end
