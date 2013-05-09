@@ -10,26 +10,26 @@ class EventsController < ApplicationController
     @event = Event.new
     @title = "Nuevo evento"
     @users = User.all
+    @invitation = Invitation.new
   end
 
   def create
     @event =  @current_user.events.build(params[:event])
     @users = User.all
 
-    p "event id: #{@event.id}"
-
-    inv = []
-    params[:users].each do |a|
-      Invitation.create!("user_id" => a)
-      inv << Invitation.find_by_user_id(a)
-    end
-
     if @event.save
+      p "------------>   #{@event.name}"
+      hash1 = Hash.new
+      hash1 = { "event_id" => @event.id}
 
-      inv.each do |a|
-        Events_Invitations.create!("event_id" => @event.id, "invitation_id" => a.id )
+      p "------------>   #{hash1}"
+
+      for com in params[:invitation] do
+        com.merge! hash1
       end
 
+      p "++++++++++#{params[:invitation]}"
+      Invitation.create!(params[:invitation])
       flash[:success] = "Evento creado exitosamente"
       redirect_to root_path
     else
