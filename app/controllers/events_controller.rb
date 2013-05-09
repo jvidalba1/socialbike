@@ -18,17 +18,13 @@ class EventsController < ApplicationController
     @users = User.all
 
     if @event.save
-      p "------------>   #{@event.name}"
       hash1 = Hash.new
       hash1 = { "event_id" => @event.id}
-
-      p "------------>   #{hash1}"
 
       for com in params[:invitation] do
         com.merge! hash1
       end
 
-      p "++++++++++#{params[:invitation]}"
       Invitation.create!(params[:invitation])
       flash[:success] = "Evento creado exitosamente"
       redirect_to root_path
