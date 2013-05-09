@@ -27,6 +27,92 @@ html {
 body {
     padding-top: 0%;
 
+  .row {
+    margin-left: 90px;
+
+    .span4{
+
+      &:first-child{
+        span{
+          margin-left: 45px;
+        }
+      }
+
+      .stats{
+        margin-left: 45px;
+      }
+
+      .user_avatars{
+        a{
+          img{
+            padding: 0px;
+          }
+        }
+      }
+    }
+    .span8{
+      h3{
+        margin-left: 45%;
+        margin-top: 80px;
+      }
+      #table_event
+      {
+        width: 104%;
+        float: right;
+        margin-right: -60px;
+      }
+      .pagination{
+        margin-left: 38%;
+      }
+    }
+  }
+
+
+  #follow_form{
+
+    .unfollow_button{
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+      white-space: nowrap;
+      background-color: #eaeaea;
+      background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+      background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+      background-image: linear-gradient(#fafafa, #eaeaea);
+      border: 1px solid #ddd;
+      border-bottom-color: #c5c5c5;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      margin-bottom: -25px;
+    }
+
+    .follow_button{
+      background: url("eye.png") no-repeat;
+      color: white;
+      background-color: rgb(48, 114, 179);
+      background-image: linear-gradient(rgb(89, 155, 205), rgb(48, 114, 179));
+      border-color: rgb(42, 101, 160);
+      margin-bottom: -25px;
+    }
+
+    .unfollow_button, .follow_button{
+      position: relative;
+      display: inline-block;
+      padding: 7px 15px;
+      font-size: 13px;
+      font-weight: bold;
+      background-repeat: repeat-x;
+      border-radius: 3px;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-appearance: none;
+    }
+  }
+
   .show_event{
     margin-left: 33%;
     margin-top: 3%;
