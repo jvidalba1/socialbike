@@ -3,10 +3,13 @@
     <td></td>
     <td><h2>Invitados (<%=  @users.count %>)</h2></td>
     <td></td>
+    <td></td>
   </tr>
   <tr class="table_head">
     <td>Nombre</td>
     <td>Email</td>
+    <td>Invitado por</td>
+    <td>Estado invitación</td>
   </tr>
   <% @users.each do |user| %>
       <tr class="table_body">
@@ -16,11 +19,13 @@
         <td>
           <%= user.email %>
         </td>
+        <td></td>
+        <td></td>
 
       </tr>
 
   <% end %>
-  <tr>
+  <!--<tr>
     <td colspan="3"><%# will_paginate @invitations %></td>
-  </tr>
+  </tr>-->
 </table>

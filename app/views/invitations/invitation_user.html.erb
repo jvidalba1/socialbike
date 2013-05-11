@@ -3,9 +3,12 @@
     <td></td>
     <td><h2>Invitaciones (<%= @current_user.invitations.count %>)</h2></td>
     <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr class="table_head">
     <td>Nombre</td>
+    <td>Descripción</td>
     <td>Fecha apertura</td>
     <td>Fecha programada</td>
     <td>Estado</td>
@@ -16,13 +19,16 @@
           <%= invitation.event.name %>
         </td>
         <td>
+          <%= invitation.event.description %>
+        </td>
+        <td>
           Posted <%= time_ago_in_words(invitation.event.created_at) %> ago.
         </td>
         <td>
           <%= invitation.event.date %>
         </td>
         <td>
-          <%= invitation.event.estado %>
+          <%= select_estado_item(invitation.event.estado)  %>
         </td>
       </tr>
 

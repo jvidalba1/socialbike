@@ -160,6 +160,25 @@ body {
   .apple_pagination a:hover, .apple_pagination a:focus {
     text-decoration: underline;
   }
+  #table_invitations
+  {
+    width: 80%;
+    margin-left: 10%;
+
+    h2{
+      margin-left: 35%;
+    }
+  }
+
+  #table_invitations_event
+  {
+    width: 80%;
+    margin-left: 12%;
+    h2{
+      margin-left: 15%;
+    }
+  }
+
   #table_blog{
     position: absolute;
     width: 42%;
