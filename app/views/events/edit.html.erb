@@ -1,3 +1,36 @@
+<section class="section_perfil_event">
+  <table>
+    <tr>
+      <td rowspan="4" class="foto_events_new">
+        <a href="<%= user_path(@current_user) %>">
+          <%= gravatar_for @current_user, :size => 80 %>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2 class="nombre_enew">
+          <%= @current_user.name %>
+        </h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+            <span>
+                <%= link_to "Ver mi perfil", @current_user %>
+            </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+            <span>
+                <%= pluralize(@current_user.events.count, "evento") %>
+            </span>
+      </td>
+    </tr>
+  </table>
+</section>
+
 <section class="section_event_form">
   <h2>Editar evento</h2>
   <%= form_for @event do |f| %>
