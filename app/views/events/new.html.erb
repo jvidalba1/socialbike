@@ -62,12 +62,21 @@
         <%= f.label :estado, "Estado" %>
         <%= f.select :estado, options_for_select(select_estado, "estado"), :prompt => "SELECCIONE UN ESTADO"%>
       </div>
-      <div class="users">
-        <%= fields_for "/", "users[]" do %>
-                <%= select_tag"users[]", options_from_collection_for_select(@users, "id", "name",""), :prompt => "SELECCIONE UN USUARIO"%>
-                <%= select_tag"users[]", options_from_collection_for_select(@users, "id", "name",""), :prompt => "SELECCIONE UN USUARIO"%>
-      <% end %>
-      </div>
+
+      <table id="table_add_inv" border=0 class="table_add">
+        <h2>Invitar usuarios</h2>
+        <tr>
+          <td>
+              <div id="table_user_body">
+              </div>
+          </td>
+        </tr>
+
+      </table>
+      <%= link_to (image_tag("add.png")), add_user_events_path, :remote => true, :class => "add_user btn_primary" %>
+      <br>
+      <br>
+      <br>
       <%= f.submit "Post", :class => "btn btn-large btn-primary" %>
   <% end %>
 </section>

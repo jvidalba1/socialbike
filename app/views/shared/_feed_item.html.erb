@@ -35,6 +35,9 @@
       <li>
         Estado: <%= select_estado_item(feed_item.estado)%> hace <%= time_ago_in_words(feed_item.updated_at) %>
       </li>
+      <li>
+        <%= link_to "Invitados", invitation_event_path(feed_item)%>
+      </li>
     </td>
 </table>
 

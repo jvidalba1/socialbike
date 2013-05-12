@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20130505054940) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "event_id"
   end
 
   create_table "relationships", :force => true do |t|

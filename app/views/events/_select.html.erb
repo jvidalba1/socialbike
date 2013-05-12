@@ -1,0 +1,14 @@
+<tr class="invitation">
+  <%= fields_for "invitation[]", @invitation do |invitation| %>
+      <td>
+        <%= invitation.select :user_id, options_from_collection_for_select(@users, "id", "name",""), :prompt => "SELECCIONE UN USUARIO"%>
+      </td>
+      <td>
+        <div class="movimiento_nested">
+          <ul>
+            <li><%= link_to image_tag("remove.png", :border => 0), "#", :class => 'remove_movimiento'  %></li>
+          </ul>
+        </div>
+      </td>
+  <% end %>
+</tr>

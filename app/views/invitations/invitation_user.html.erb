@@ -1,0 +1,39 @@
+<table id="table_invitations" class="table">
+  <tr>
+    <td></td>
+    <td><h2>Invitaciones (<%= @current_user.invitations.count %>)</h2></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="table_head">
+    <td>Nombre</td>
+    <td>Descripción</td>
+    <td>Fecha apertura</td>
+    <td>Fecha programada</td>
+    <td>Estado</td>
+  </tr>
+  <% @invitations.each do |invitation| %>
+      <tr class="table_body">
+        <td>
+          <%= invitation.event.name %>
+        </td>
+        <td>
+          <%= invitation.event.description %>
+        </td>
+        <td>
+          Posted <%= time_ago_in_words(invitation.event.created_at) %> ago.
+        </td>
+        <td>
+          <%= invitation.event.date %>
+        </td>
+        <td>
+          <%= select_estado_item(invitation.event.estado)  %>
+        </td>
+      </tr>
+
+  <% end %>
+  <tr>
+    <td colspan="3"><%# will_paginate @invitations %></td>
+  </tr>
+</table>

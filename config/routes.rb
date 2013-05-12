@@ -12,7 +12,15 @@ Socialbike::Application.routes.draw do
   resources :pages
   resources :feeds
 
-  resources :events
+  match '/invitations/invitation_user', :to => "invitations#invitation_user"
+  get '/invitations/invitation_event/:id', :to => "invitations#invitation_event", :as => "invitation_event"
+
+  resources :events do
+
+    collection do
+      get "add_user"
+    end
+  end
 
   match '/events/new', :to => 'events#new'
 

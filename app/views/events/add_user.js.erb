@@ -1,0 +1,7 @@
+$("#table_add_inv").append("<%= escape_javascript( render(:partial => "select")) %>");
+/*$(".spin").spin(false);
+ */
+$('.remove_movimiento').click(function(e){
+    e.preventDefault();
+    $(this).parents('.invitation').remove();
+});
