@@ -18,16 +18,25 @@ class EventsController < ApplicationController
     @users = User.all
 
     if @event.save
-      hash1 = Hash.new
-      hash1 = { "event_id" => @event.id}
 
-      for com in params[:invitation] do
-        com.merge! hash1
+      if params[:invitation].present?
+        hash1 = Hash.new
+        hash1 = { "event_id" => @event.id}
+
+        for com in params[:invitation] do
+          com.merge! hash1
+        end
+
+        Invitation.create!(params[:invitation])
+
+        flash[:success] = "Evento creado exitosamente"
+        redirect_to root_path
+
+      else
+        flash[:success] = "Evento creado exitosamente, no invitaste a nadie :("
+        redirect_to root_path
       end
 
-      Invitation.create!(params[:invitation])
-      flash[:success] = "Evento creado exitosamente"
-      redirect_to root_path
     else
       @feed_items = []
       flash[:alert] = "Hay errores en los datos de entrada"
@@ -37,6 +46,17 @@ class EventsController < ApplicationController
   end
 
   def destroy
+
+  end
+
+  def add_user
+
+    @invitation = Invitation.new
+    @users = User.all
+    p "oelo entro"
+    respond_to do |format|
+      format.js
+    end
 
   end
 end

@@ -98,7 +98,7 @@ body {
     margin-left: 35%;
 
     h2{
-      margin-left: -40%;
+      margin-left: -81%;
     }
     input{
       width: 500px;
@@ -107,6 +107,30 @@ body {
     #event_description{
       width: 500px;
       height: 150px;
+    }
+
+    #table_add_inv{
+      margin-top: -25px;
+
+      .invitation{
+        .movimiento_nested{
+
+          ul{
+            list-style: none;
+            margin-top: -50px;
+          }
+
+          img{
+            width: 25px;
+          }
+        }
+      }
+
+    }
+    .add_user{
+      img{
+        margin-top: -8px;
+      }
     }
   }
   .nombre_enew{
