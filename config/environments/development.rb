@@ -34,4 +34,8 @@ Socialbike::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  FACEBOOK_APP_ID = 'zpNM7Yk3LK9dgGgMeA55w'
+  FACEBOOK_APP_SECRET = 'z6ZudOMvViQhYY47cusWQmOY8whT77bozqh7mqf0Lg'
+
 end
