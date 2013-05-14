@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @events = @user.events.paginate(:per_page => 10, :page => params[:page])
-    @title = @user.name
+    @blogs  = @user.blogs.paginate(:per_page => 10, :page => params[:page])
+    @title  = @user.name
   end
 
   def new

@@ -27,6 +27,7 @@
           <br>
         <a href="http://gravatar.com/emails/" target=_blank> Cambiar foto</a><br>
         <%= link_to "Nuevo evento", new_event_path %><br>
+        <%= link_to "Nuevo blog", new_blog_path %><br>
         <%= link_to "Invitaciones", "/invitations/invitation_user" %>
       <% end %>
       <section>
@@ -75,7 +76,7 @@
 <table id="table_blog" class="table">
   <tr>
     <td></td>
-    <td><h2>Blog (<%# @user.blogs.count %>)</h2></td>
+    <td><h2>Blog (<%= @user.blogs.count %>)</h2></td>
     <td></td>
   </tr>
   <tr class="table_head">
@@ -83,13 +84,13 @@
     <td>Creacion</td>
     <td colspan="2">Opciones</td>
   </tr>
-  <%# @blogs.each do |event| %>
+  <% @blogs.each do |blog| %>
       <tr class="table_body">
         <td>
-          <%# event.name %>
+          <%= blog.name %>
         </td>
         <td>
-          Posted <%# time_ago_in_words(event.created_at) %> ago.
+          Posted <%= time_ago_in_words(blog.created_at) %> ago.
         </td>
         <td>
           <div class="button_group">
@@ -102,9 +103,9 @@
         </td>
       </tr>
 
-  <%# end %>
+  <% end %>
   <tr>
-    <td colspan="3"><%= will_paginate @events %></td>
+    <td colspan="3"><%= will_paginate @blogs %></td>
   </tr>
 
 </table>
