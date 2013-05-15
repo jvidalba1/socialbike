@@ -31,15 +31,28 @@ class BlogsController < ApplicationController
   end
 
   def edit
-
+    @blog = Blog.find(params[:id])
+    @title = "Editar blog"
   end
 
   def update
+    @blog = Blog.find(params[:id])
 
+    if @blog.update_attributes(params[:blog])
+
+      flash[:success] = "Blog actualizado"
+      redirect_to root_path
+    else
+      flash[:alert] ="Error en los datos"
+      @title = "Editar blog"
+      render 'edit'
+    end
   end
 
   def destroy
-
+    Blog.find(params[:id]).destroy
+    flash[:success] = "Blog eliminado"
+    redirect_to @current_user
   end
 
 end

@@ -95,9 +95,9 @@
         <td>
           <div class="button_group">
             <ul>
-              <li><%= link_to "Ver",  "#", :class => "minibutton"%></li>
-              <li><%= link_to "Editar", "#", :class => "minibutton" %></li>
-              <li><%= link_to "Cancelar", "#", :method => :delete, :confirm => "¿Esta seguro?", :class => "minibutton_danger" %></li>
+              <li><%= link_to "Ver",  blog_path(blog), :class => "minibutton"%></li>
+              <li><%= link_to "Editar", edit_blog_path(blog), :class => "minibutton" %></li>
+              <li><%= link_to "Eliminar", blog_path(blog), :method => :delete, :confirm => "¿Esta seguro?", :class => "minibutton_danger" %></li>
             </ul>
           </div>
         </td>
