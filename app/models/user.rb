@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :email, :name, :password, :password_confirmation
 
+  has_many :blogs
   has_many :events, :dependent => :destroy
   has_many :invitations
 

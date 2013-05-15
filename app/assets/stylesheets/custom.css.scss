@@ -67,7 +67,6 @@ body {
     }
   }
 
-
   #follow_form{
 
     .unfollow_button{
@@ -209,7 +208,16 @@ body {
     margin-left: 100px;
   }
 
-  .section_event_form
+  .section_blog_form{
+
+    .field{
+      #blog_content{
+        width: 59%;
+      }
+    }
+  }
+
+  .section_event_form, .section_blog_form
   {
     margin-left: 35%;
 
@@ -608,7 +616,6 @@ p {
     color: #fff;
     text-decoration: none;
 }
-
 
 /* footer */
 
