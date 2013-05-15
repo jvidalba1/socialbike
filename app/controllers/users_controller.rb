@@ -77,4 +77,8 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def email_twitter
+
+  end
+
 end

@@ -5,8 +5,6 @@
 #  id                 :integer          not null, primary key
 #  name               :string(255)
 #  email              :string(255)
-#  oauth_expires_at   :datetime
-#  oauth_token        :string(255)
 #  provider           :string(255)
 #  uid                :string(255)
 #  created_at         :datetime         not null
@@ -32,21 +30,30 @@ class User < ActiveRecord::Base
                                     :dependent   =>   :destroy
 
   has_many :followers, :through => :reverse_relationships, :source => :follower
-
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :name,		:presence 		  => true,
                       :length   		  => { :maximum => 50}
 
-  validates :email, 	:presence 		  => true,
-                      :format 			  => { :with => EMAIL_REGEX},
+  validates :email,
+            #:presence 		  => true,
+                    #  :format 			  => { :with => EMAIL_REGEX},
                       :uniqueness 	  => { :case_sensitive => false, :message => " -Este email ya existe" }
 
-  validates :password, :presence 		  => { :message => "Ingresa una contrasenia"},
-                       :confirmation 	=> { :message => " -Confirmacion mala"},
-                       :length			  => { :within => 6..40, :message => "Min 6 y Max 40" }
+  validates :password,
+  # :presence 		  => { :message => "Ingresa una contrasenia"},
+                       :confirmation 	=> { :message => " -Confirmacion mala"}
+  #                     :length			  => { :within => 6..40, :message => "Min 6 y Max 40" }
 
   before_save :encrypt_password
+
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.provider = auth["provider"]
+      user.uid = auth["uid"]
+      user.name = auth["info"]["name"]
+    end
+  end
 
   def following?(other_user)
     relationships.find_by_followed_id(other_user.id)

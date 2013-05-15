@@ -12,6 +12,8 @@ Socialbike::Application.routes.draw do
   resources :pages
   resources :feeds
 
+  match "/auth/:provider/callback" => "sessions#create_twitter"
+
   match '/invitations/invitation_user', :to => "invitations#invitation_user"
   get '/invitations/invitation_event/:id', :to => "invitations#invitation_event", :as => "invitation_event"
 
