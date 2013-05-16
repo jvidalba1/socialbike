@@ -19,6 +19,7 @@ class Event < ActiveRecord::Base
 
   has_many :invitations
   has_many :users, :through => :invitations
+  has_many :comments
 
   default_scope :order => 'events.created_at DESC'
 
