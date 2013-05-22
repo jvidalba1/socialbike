@@ -14,10 +14,8 @@ class Comment < ActiveRecord::Base
 
   attr_accessible :content, :event_id, :blog_id
 
-  belongs_to :event_id
-  belongs_to :blog_id
+  belongs_to :event
+  belongs_to :blog
 
-  default_scope :order => 'events.created_at DESC'
-
-  validates :content, :presence => true
+  #validates :content, :presence => true
 end

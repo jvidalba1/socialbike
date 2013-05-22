@@ -9,11 +9,24 @@ class BlogsController < ApplicationController
   def show
     @blog = Blog.find(params[:id])
     @title = "Blog "+@blog.name
+
+    @comment = @blog.comments.build(params[:comment])
+
+=begin
+    if @comment.save
+      flash[:success] = "Comentario creado"
+      redirect_to :action => :new
+    else
+      flash[:alert] = "problemas"
+      render :action => 'new'
+    end
+=end
   end
 
   def new
     @blog = Blog.new
     @title = "Nuevo blog"
+
   end
 
   def create
