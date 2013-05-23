@@ -12,15 +12,7 @@ class BlogsController < ApplicationController
 
     @comment = @blog.comments.build(params[:comment])
 
-=begin
-    if @comment.save
-      flash[:success] = "Comentario creado"
-      redirect_to :action => :new
-    else
-      flash[:alert] = "problemas"
-      render :action => 'new'
-    end
-=end
+    @comments = @blog.comments
   end
 
   def new

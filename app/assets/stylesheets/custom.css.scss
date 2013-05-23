@@ -27,6 +27,32 @@ html {
 body {
     padding-top: 0%;
 
+  .form_blog_comments{
+    .field{
+      label{
+        margin-left: 30%;
+        margin-top: -30px;
+      }
+
+      .text_area_bc{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: -20px;
+      }
+
+      .btn{
+        margin-left: 25%;
+        margin-top: -12px;
+      }
+
+      hr{
+        width: 76%;
+        margin-left: 12%;
+
+      }
+    }
+  }
+
   .row {
     margin-left: 90px;
 
