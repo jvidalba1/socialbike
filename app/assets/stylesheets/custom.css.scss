@@ -138,14 +138,44 @@ body {
     }
   }
 
+  .blog_comments{
+    width: 65%;
+    margin-left: 18%;
+    table{
+      tr{
+
+        td{
+          padding: 10px;
+          background: lightgrey;
+
+          &:nth-child(2n){
+            background: #eee;
+            padding: 15px;
+          }
+        }
+
+
+
+      }
+    }
+  }
+
+  .show_blog{
+    width: 65%;
+    margin-left: 18%;
+  }
+
   .show_event{
     margin-left: 33%;
+  }
+
+  .show_event, .show_blog{
     margin-top: 3%;
     border: 1px solid #333;
     border-radius: 35px;
     margin-right: 399px;
 
-    .table_show_event{
+    .table_show_event, .table_show_blog{
       color: #669;
       width: 101%;
 

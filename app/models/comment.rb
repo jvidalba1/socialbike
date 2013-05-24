@@ -18,4 +18,6 @@ class Comment < ActiveRecord::Base
   belongs_to :blog
 
   #validates :content, :presence => true
+
+  default_scope :order => 'comments.created_at DESC'
 end
