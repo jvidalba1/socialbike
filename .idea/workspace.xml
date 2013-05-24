@@ -17,7 +17,7 @@
     <file path="/user.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1368506306463" ignored="false" />
     <file path="$PROJECT_DIR$/../rails_projects/sample_app/app/views/users/new.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1362546676393" ignored="false" />
     <file path="$PROJECT_DIR$/../rails_projects/sample_app/app/views/users/show.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1364709339119" ignored="false" />
-    <file path="/show.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1369374369270" ignored="false" />
+    <file path="/show.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1369374781292" ignored="false" />
     <file path="/sessions_controller.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1365050148003" ignored="false" />
     <file path="$PROJECT_DIR$/../rails_projects/sample_app/app/views/sessions/new.html.erb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1362618736465" ignored="false" />
     <file path="$PROJECT_DIR$/../rails_projects/sample_app/app/controllers/sessions_controller.rb" changelist="23eb188e-e15a-4340-92eb-62320143b559" time="1362626742136" ignored="false" />
@@ -134,7 +134,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="30" selection-start="2263" selection-end="2263" vertical-scroll-proportion="-57.5">
+            <state line="100" column="16" selection-start="2618" selection-end="2618" vertical-scroll-proportion="-15.625">
               <folding />
             </state>
           </provider>
@@ -179,7 +179,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/blogs/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="19" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.63414633">
+            <state line="46" column="32" selection-start="957" selection-end="957" vertical-scroll-proportion="0.5778612">
               <folding />
             </state>
           </provider>
@@ -207,9 +207,9 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/blogs_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/app/models/comment.rb" />
+        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/blogs/show.html.erb" />
       </list>
     </option>
@@ -914,14 +914,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="30" selection-start="2263" selection-end="2263" vertical-scroll-proportion="-57.5">
+        <state line="100" column="16" selection-start="2618" selection-end="2618" vertical-scroll-proportion="-15.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/blogs/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="19" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.63414633">
+        <state line="46" column="32" selection-start="957" selection-end="957" vertical-scroll-proportion="0.5778612">
           <folding />
         </state>
       </provider>

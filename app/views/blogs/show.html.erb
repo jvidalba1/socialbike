@@ -44,7 +44,9 @@
     </tr>
 
   </table>
-  <%= link_to "Editar", edit_blog_path(@blog), :class => "btn btn-large btn-primary"  %>
+  <% if current_user?(@blog.user) %>
+    <%= link_to "Editar", edit_blog_path(@blog), :class => "btn btn-large btn-primary"  %>
+   <% end %>
   <%= link_to "Regresar", @current_user, :class => "btn btn-large btn-primary"  %>
 </section>
 
