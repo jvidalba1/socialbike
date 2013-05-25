@@ -56,3 +56,34 @@
   <%= link_to "Editar", edit_event_path(@event), :class => "btn btn-large btn-primary"  %>
   <%= link_to "Regresar", @current_user, :class => "btn btn-large btn-primary"  %>
 </section>
+
+
+<section class="form_blog_comments">
+  <h2>Comentarios(<%= @event.comments.count %>)</h2>
+
+  <%= form_for [@event, @comment] do |f| %>
+      <div class="field">
+        <%= f.text_area :content, :class => "text_area_bc", :rows => 5 %>
+        <p><%= f.submit "Comentar", :class => "btn btn-large btn-primary"%></p>
+      </div>
+  <% end %>
+  <hr>
+</section>
+
+<section class="blog_comments">
+  <table>
+    <% @comments.each do |comment| %>
+        <tr>
+          <td>Usuario</td>
+          <td><%= comment.content %></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><%= comment.created_at %></td>
+        </tr>
+        <tr>
+          <td colspan="2"><hr></td>
+        </tr>
+    <% end %>
+  </table>
+</section>

@@ -6,9 +6,12 @@ class CommentsController < ApplicationController
   end
 =end
   def create
-    @blog = Blog.find(params[:blog_id])
 
-    @comment = @blog.comments.build(params[:comment])
+    if params[:blog_id].present?
+
+      @blog = Blog.find(params[:blog_id])
+      @comment = @blog.comments.build(params[:comment])
+
       if @comment.save
         flash[:success] = "Comentario creado"
         redirect_to @blog
@@ -16,6 +19,20 @@ class CommentsController < ApplicationController
         flash[:alert] = "problemas"
         render @blog
       end
-  end
 
+    elsif params[:event_id].present?
+
+      @event = Event.find(params[:event_id])
+      @comment = @event.comments.build(params[:comment])
+
+      if @comment.save
+        flash[:success] = "Comentario creado"
+        redirect_to @event
+      else
+        flash[:alert] = "problemas"
+        render @event
+      end
+    end
+
+  end
 end

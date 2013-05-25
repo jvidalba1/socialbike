@@ -7,9 +7,12 @@ class EventsController < ApplicationController
   end
 
   def show
-
     @event = Event.find(params[:id])
     @title = "Evento "+@event.name
+
+    @comment = @event.comments.build(params[:comment])
+
+    @comments = @event.comments
   end
 
   def new

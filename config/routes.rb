@@ -4,6 +4,7 @@ Socialbike::Application.routes.draw do
 
   resources :sessions,      :only => [:new, :create, :destroy]
   resources :relationships, :only => [:create, :destroy]
+
   resources :blogs do
     resources :comments
   end
@@ -21,6 +22,8 @@ Socialbike::Application.routes.draw do
   get '/invitations/invitation_event/:id', :to => "invitations#invitation_event", :as => "invitation_event"
 
   resources :events do
+
+    resources :comments
 
     collection do
       get "add_user"
