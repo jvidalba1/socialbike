@@ -23,16 +23,19 @@
       <%= @user.email %>
       <br>
       <% if current_user?(@user) %>
-        <%= link_to "Editar informacion", edit_user_path(@user) %>
-          <br>
-        <a href="http://gravatar.com/emails/" target=_blank> Cambiar foto</a><br>
-        <%= link_to "Nuevo evento", new_event_path %><br>
-        <%= link_to "Nuevo blog", new_blog_path %><br>
-        <%= link_to "Invitaciones", "/invitations/invitation_user" %>
+        <%= link_to (image_tag("edit_info_icon.png")), edit_user_path(@user), :title => "Editar información" %>
+        <%= link_to (image_tag("change_photo_icon.png")), "http://gravatar.com/emails/", :target => "_blank", :title => "Cambiar foto" %>
+        <%= link_to (image_tag("add_event_icon.png")), new_event_path, :class => "new_event", :title => "Nuevo evento" %>
+        <%= link_to (image_tag("add_blog_icon.png")), new_blog_path, :class => "new_blog", :title => "Nuevo blog" %>
+        <%= link_to (image_tag("invitations_icon.png")), "/invitations/invitation_user", :title => "Invitaciones" %>
+          <section class="followers_following">
+            <%= render 'shared/stats' %>
+          </section>
+      <% else %>
+          <section>
+            <%= render 'shared/stats' %>
+          </section>
       <% end %>
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
       <%= render 'follow_form' if signed_in? %>
     </td>
   </tr>

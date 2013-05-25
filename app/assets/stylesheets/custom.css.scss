@@ -153,9 +153,6 @@ body {
             padding: 15px;
           }
         }
-
-
-
       }
     }
   }
@@ -719,11 +716,21 @@ td.main{
 }
 
 td.sidebar{
-    width: 40%;
-    padding: 1em;
-    vertical-align: top;
-    background: #C0C0C0;
+  width: 40%;
+  padding: 1em;
+  vertical-align: top;
+  background: #C0C0C0;
   border-radius: 8px;
+
+  .followers_following{
+    margin-top: 70px;
+  }
+  a{
+    img{
+      width: 8%;
+      padding: 3px;
+    }
+  }
 }
 
 .profile img.gravatar{

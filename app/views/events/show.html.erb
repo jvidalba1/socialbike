@@ -53,7 +53,9 @@
       <td><%= @event.estado %></td>
     </tr>
   </table>
-  <%= link_to "Editar", edit_event_path(@event), :class => "btn btn-large btn-primary"  %>
+  <% if current_user?(@event.user) %>
+    <%= link_to "Editar", edit_event_path(@event), :class => "btn btn-large btn-primary"  %>
+  <% end %>
   <%= link_to "Regresar", @current_user, :class => "btn btn-large btn-primary"  %>
 </section>
 
