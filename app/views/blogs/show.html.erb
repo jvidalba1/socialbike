@@ -66,7 +66,7 @@
   <table>
     <% @comments.each do |comment| %>
         <tr>
-          <td>Usuario</td>
+          <td><%= link_to comment.user.name, user_path(comment.user) %></td>
           <td><%= comment.content %></td>
         </tr>
         <tr>

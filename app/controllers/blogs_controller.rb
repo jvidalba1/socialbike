@@ -10,9 +10,9 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
     @title = "Blog "+@blog.name
 
-    @comment = @blog.comments.build(params[:comment])
-
+    @comment = Comment.new
     @comments = @blog.comments
+
   end
 
   def new
