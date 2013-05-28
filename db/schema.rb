@@ -11,11 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514041744) do
+ActiveRecord::Schema.define(:version => 20130516063909) do
 
   create_table "blogs", :force => true do |t|
     t.string   "name"
     t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "content"
+    t.integer  "event_id"
+    t.integer  "blog_id"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -64,6 +73,8 @@ ActiveRecord::Schema.define(:version => 20130514041744) do
     t.string   "email"
     t.string   "provider"
     t.string   "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "encrypted_password"

@@ -7,6 +7,8 @@
 #  email              :string(255)
 #  provider           :string(255)
 #  uid                :string(255)
+#  oauth_token        :string(255)
+#  oauth_expires_at   :datetime
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  encrypted_password :string(255)
@@ -46,12 +48,25 @@ class User < ActiveRecord::Base
   #                     :length			  => { :within => 6..40, :message => "Min 6 y Max 40" }
 
   before_save :encrypt_password
-
+=begin
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
+    end
+  end
+=end
+
+  def self.from_omniauth(auth)
+    where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = auth.info.name
+      user.email = auth.info.email
+      user.oauth_token = auth.credentials.token
+      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+      user.save!
     end
   end
 
