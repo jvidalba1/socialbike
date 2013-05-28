@@ -27,8 +27,30 @@ html {
 body {
     padding-top: 0%;
 
+  .redes{
+    float: right;
+    margin-right: 20%;
+    margin-top: 3%;
+
+    ul{
+      list-style: none;
+      li{
+        a{
+          img{
+            width: 51%;
+          }
+        }
+
+      }
+    }
+  }
+
   .row {
-    margin-left: 90px;
+    padding-right: 2%;
+    width: 59%;
+    float: left;
+    margin-top: 5%;
+    border-right: 1px solid gainsboro;
 
     .span4{
 

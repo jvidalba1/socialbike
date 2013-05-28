@@ -28,8 +28,6 @@
               <li><%= link_to "Salir", signout_path, :method => "delete" %></li>
           <% else %>
               <li><%= link_to "Entrar", signin_path %></li>
-              <li><%= link_to "Twitter", "/auth/twitter" %></li>
-              <li><%= link_to "Facebook", "/auth/facebook" %></li>
           <% end %>
         </ul>
       </nav>
@@ -43,7 +41,6 @@
       </div>
   <% end %>
 </div>
-<h2>Nombre: <%= current_user.inspect %></h2>
 <%= yield %>
 
 </body>
