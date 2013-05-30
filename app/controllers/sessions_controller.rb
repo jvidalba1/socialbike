@@ -33,7 +33,32 @@ class SessionsController < ApplicationController
     auth = request.env["omniauth.auth"]
     user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)
     session[:user_id] = user.id
-    redirect_to root_url, :notice => "Signed in!"
+    if user.email.present?
+      redirect_to user_path(user)
+    else
+      redirect_to edit_session_path(user)
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.email = params[:user][:email]
+
+    if @user.update_attributes(params[:user])
+
+      flash[:success] = "Email actualizado"
+      redirect_to @user
+    else
+      flash[:alert] ="Error"
+      @title = "Edit user"
+      render 'edit'
+    end
+
   end
 
 end
