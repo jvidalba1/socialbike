@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'jquery-ui-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
