@@ -20,12 +20,9 @@ module SessionsHelper
     @current_user = user
   end
 
-  def current_user=(user)
-    @current_user = user
-  end
-
   def current_user
-    @current_user ||= user_from_remember_token
+    p "entro a current user +++++++++++++++++++++++++++"
+    (@current_user ||= user_from_remember_token) || (@current_user ||= User.find(session[:user_id]) if session[:user_id])
   end
 
   def current_user?(user)
@@ -38,7 +35,7 @@ module SessionsHelper
 
   def sign_out
     cookies.delete(:remember_token)
-    self.current_user = nil
+    session[:user_id] = nil
   end
 
   def store_location

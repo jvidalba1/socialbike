@@ -1,0 +1,9 @@
+<center>
+<%= form_for @user do |user| %>
+
+    <%= user.label :email, "Email" %>
+    <%= user.text_field :email %>
+
+    <%= user.submit "Grabar", :class => "btn btn-large btn-primary" %>
+<% end %>
+</center>

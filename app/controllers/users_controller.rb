@@ -78,4 +78,6 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+
+
 end
