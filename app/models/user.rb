@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   #                     :length			  => { :within => 6..40, :message => "Min 6 y Max 40" }
 
   before_save :encrypt_password
-=begin
+
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth["provider"]
@@ -58,7 +58,6 @@ class User < ActiveRecord::Base
       user.name = auth["info"]["name"]
     end
   end
-=end
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|

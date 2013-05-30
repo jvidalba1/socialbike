@@ -29,18 +29,6 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  def create_twitter
-    auth = request.env["omniauth.auth"]
-    user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)
-    session[:user_id] = user.id
-
-    if user.email.present?
-      redirect_to user_path(user)
-    else
-      redirect_to edit_session_path(user)
-    end
-  end
-
   def edit
     @user = User.find(params[:id])
   end
@@ -61,10 +49,32 @@ class SessionsController < ApplicationController
 
   end
 
-  def create_facebook
+  def create_provider
+    if(params[:provider] == 'facebook')
+      create_facebook(env)
+    elsif(params[:provider] == 'twitter')
+      create_twitter
+    end
+  end
+
+  private
+
+  def create_facebook(env)
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
     redirect_to root_url
+  end
+
+  def create_twitter
+    auth = request.env["omniauth.auth"]
+    user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)
+    session[:user_id] = user.id
+
+    if user.email.present?
+      redirect_to user_path(user)
+    else
+      redirect_to edit_session_path(user)
+    end
   end
 
 end
