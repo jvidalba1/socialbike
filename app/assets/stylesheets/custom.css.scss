@@ -27,6 +27,17 @@ html {
 body {
     padding-top: 0%;
 
+  .container{
+    a{
+      img{
+        width: 55%;
+        margin-top: 2px;
+        margin-left: -4%;
+      }
+    }
+
+  }
+
   .form_blog_comments{
     .field{
       label{
@@ -630,7 +641,7 @@ section {
 
 .video{
   float: left;
-  padding-left: 25px;
+  padding-left: 0%;
   box-shadow: 10px 10px 8px #333;
 }
 
@@ -643,7 +654,7 @@ textarea {
 }
 
 .center h1 {
-    margin-bottom: 10px;
+    margin-bottom: 0%;
 }
 
 /* typography */
@@ -811,18 +822,14 @@ input {
 
 #footer{
   width: 100%;
-  margin: 0 auto;
   height: 120px;
-  color: #fff;
-  font-size: 14px;
-  background-color: rgb(242, 247, 240);
-  background-repeat: repeat-x;
-  border: 1px solid rgb(104, 107, 104);
-  border-bottom-color: rgb(104, 107, 104);
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.7);
-  margin-top: 87px;
-  border-top-left-radius: 45px;
-  border-top-right-radius: 45px;
+
+
+  img{
+    width: 100%;
+    margin-top: -10%;
+  }
+/*
 
   .box1 .box2{
 
@@ -884,6 +891,7 @@ input {
       }
     }
   }
+  */
 
 }
   /*
