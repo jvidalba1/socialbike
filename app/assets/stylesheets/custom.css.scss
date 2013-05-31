@@ -810,16 +810,12 @@ input {
 }
 
 #footer{
-  width: 65%;
+  width: 100%;
   margin: 0 auto;
   height: 120px;
-  padding-left: 15px;
   color: #fff;
   font-size: 14px;
   background-color: rgb(242, 247, 240);
-  background-image: -moz-linear-gradient(rgb(25, 196, 22));
-  background-image: -webkit-linear-gradient(rgb(25, 196, 22));
-  background-image: linear-gradient(rgb(25, 196, 22));
   background-repeat: repeat-x;
   border: 1px solid rgb(104, 107, 104);
   border-bottom-color: rgb(104, 107, 104);
@@ -827,6 +823,7 @@ input {
   margin-top: 87px;
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
+
   .box1 .box2{
 
     width: 40%;
