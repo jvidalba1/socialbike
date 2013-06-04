@@ -5,6 +5,9 @@ gem 'jquery-ui-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem 'polylines'
+gem 'paperclip', '~> 3.0'
+gem 'nokogiri'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"

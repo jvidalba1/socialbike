@@ -5,6 +5,8 @@ Socialbike::Application.routes.draw do
   resources :sessions,      :only => [:new, :create, :destroy, :edit]
   resources :relationships, :only => [:create, :destroy]
 
+  resources :tracks
+
   resources :blogs do
     resources :comments
   end
