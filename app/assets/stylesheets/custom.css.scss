@@ -27,6 +27,11 @@ html {
 body {
     padding-top: 0%;
 
+  .video{
+    margin-top: 0%;
+  }
+
+
   .container{
     a{
       img{
@@ -82,7 +87,7 @@ body {
   }
 
   .row {
-    padding-right: 2%;
+    margin-left: -3%;
     width: 59%;
     float: left;
     margin-top: 5%;
@@ -294,7 +299,7 @@ body {
   }
   .ui-datepicker-trigger{
     float: right;
-    margin-right: 77%;
+    margin-right: 75%;
     margin-top: 3px;
   }
 
@@ -697,11 +702,15 @@ p {
 }
 .contenido{
 
+  margin-bottom: 15%;
+
     .alert{
       text-align: center;
       width: 50%;
       margin-left: 23%;
       font-size: 25px;
+      margin-top: 20%;
+      margin-bottom: -12%;
     }
 }
 

@@ -3232,7 +3232,7 @@ button.close {
 }
 
 .btn-large {
-    padding: 2% 7%;
+    padding: 1% 5%;
     font-size: 130%;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -4247,6 +4247,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inner {
+    margin-bottom: 8%;
   height: 120px;
   padding-right: 20px;
   padding-left: 20px;
@@ -4447,6 +4448,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-fixed-top {
+    position: absolute;
   top: 0;
 }
 
@@ -5942,7 +5944,7 @@ a.badge:hover {
 }
 
 .hero-unit {
-    margin-top: 1%;
+    margin-top: -4.5%;
     padding: 5%;
     margin-bottom: 2%;
     font-size: 18px;
