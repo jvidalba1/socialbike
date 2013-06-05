@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130516063909) do
+ActiveRecord::Schema.define(:version => 20130605005603) do
 
   create_table "blogs", :force => true do |t|
     t.string   "name"
@@ -57,6 +57,20 @@ ActiveRecord::Schema.define(:version => 20130516063909) do
     t.integer  "event_id"
   end
 
+  create_table "points", :force => true do |t|
+    t.integer  "Tracksegment_id"
+    t.string   "name"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.float    "elevation"
+    t.string   "description"
+    t.datetime "point_created_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "points", ["Tracksegment_id"], :name => "index_points_on_Tracksegment_id"
+
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
@@ -67,6 +81,24 @@ ActiveRecord::Schema.define(:version => 20130516063909) do
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], :name => "index_relationships_on_follower_id_and_followed_id", :unique => true
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
+
+  create_table "tracks", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "gpx_file_name"
+    t.string   "gpx_content_type"
+    t.integer  "gpx_file_size"
+    t.datetime "gpx_updated_at"
+  end
+
+  create_table "tracksegments", :force => true do |t|
+    t.integer  "Track_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tracksegments", ["Track_id"], :name => "index_tracksegments_on_Track_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
