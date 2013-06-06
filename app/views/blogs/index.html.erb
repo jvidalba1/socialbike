@@ -1,0 +1,44 @@
+<div class="blogs_all">
+<h2>Blogs</h2>
+<table id="table_blog_all" class="table">
+  <tr class="table_head">
+    <td>Nombre</td>
+    <td>Contenido</td>
+    <td>Creación</td>
+    <td>Usuario</td>
+    <td colspan="2">Opciones</td>
+  </tr>
+  <% @blogs.each do |blog| %>
+      <tr class="table_body">
+        <td>
+          <%= blog.name %>
+        </td>
+        <td>
+          <%= blog.content %>
+        </td>
+        <td>
+          Posted <%= time_ago_in_words(blog.created_at) %> ago.
+        </td>
+        <td>
+          <%= blog.user.name %>
+        </td>
+        <td>
+          <div class="button_group">
+            <ul>
+              <li><%= link_to "Ver",  blog_path(blog), :class => "minibutton"%></li>
+              <% if current_user?(@user) %>
+                  <li><%= link_to "Editar", edit_blog_path(blog), :class => "minibutton" %></li>
+                  <li><%= link_to "Eliminar", blog_path(blog), :method => :delete, :confirm => "¿Esta seguro?", :class => "minibutton_danger" %></li>
+              <% end %>
+            </ul>
+          </div>
+        </td>
+      </tr>
+
+  <% end %>
+  <tr>
+    <td colspan="3"><%= will_paginate @blogs %></td>
+  </tr>
+
+</table>
+</div>

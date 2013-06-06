@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
   before_filter :signed_in_user
 
   def index
-
+    @blogs = Blog.paginate(:per_page => 10, :page => params[:page])
   end
 
   def show
