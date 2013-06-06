@@ -1,3 +1,4 @@
+<div class="entrada">
 <h1>Registro</h1>
 
 <div class="row">
@@ -36,4 +37,11 @@
     <% end %>
   </div>
 </div>
-<%= render 'shared/socialnet' %>
+  <div class="redes_2">
+    <h5>Puedes ingresar con estas cuentas</h5>
+    <ul>
+      <li><%= link_to (image_tag("twitter_icon.png", :class => "img-rounded")), "/auth/twitter", :title => "Twitter" %></li>
+      <li><%= link_to (image_tag("facebook_icon.png", :class => "img-rounded")), "/auth/facebook", :title => "Facebook" %></li>
+    </ul>
+  </div>
+</div>
