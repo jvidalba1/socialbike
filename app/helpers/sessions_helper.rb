@@ -17,7 +17,14 @@ module SessionsHelper
 
   def correct_user_events
     @event = Event.find(params[:id])
+    flash[:danger] = "Acceso restringido"
     redirect_to(user_path(@current_user)) unless current_user?(@event.user)
+  end
+
+  def correct_user_blogs
+    @blog = Blog.find(params[:id])
+    flash[:danger] = "Acceso restringido"
+    redirect_to(user_path(@current_user)) unless current_user?(@blog.user)
   end
 
   def sign_in(user)
