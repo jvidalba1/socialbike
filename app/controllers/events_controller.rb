@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
 
   before_filter :signed_in_user
+  before_filter :correct_user_events, :only => [:edit]
 
   def index
 

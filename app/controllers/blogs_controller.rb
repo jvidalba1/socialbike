@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
 
   before_filter :signed_in_user
+  #before_filter :correct_user, :only => [:edit]
 
   def index
     @blogs = Blog.paginate(:per_page => 10, :page => params[:page])

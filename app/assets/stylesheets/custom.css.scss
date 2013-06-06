@@ -77,15 +77,15 @@ body {
     }
 
     .redes{
-      margin-top: 29%;
+      margin-top: 2%;
     }
 
     .redes_2{
-      margin-top: 37%;
+      margin-top: 2%;
     }
   .redes, .redes_2{
     float: left;
-    margin-left: -40%;
+    margin-left: 15%;
 
     ul{
       list-style: none;
@@ -103,7 +103,6 @@ body {
   .row {
     margin-left: -3%;
     width: 60%;
-    float: left;
     margin-top: 5%;
     border-bottom: 1px solid gainsboro;
 
@@ -135,7 +134,6 @@ body {
       #table_event
       {
         width: 104%;
-        float: right;
         margin-right: -60px;
       }
       .pagination{
@@ -445,8 +443,8 @@ body {
   #table_blog{
     position: absolute;
     width: 42%;
-    float: right;
     margin-top: 2%;
+    margin-left: 30%;
   }
   .blogs_all{
     margin-top: 10%;
@@ -473,8 +471,10 @@ body {
   #table_event
   {
     width: 42%;
-    float: right;
-    margin-right: 9%;
+    margin-left: 30%;
+  }
+
+  .event_and_blog{
   }
 
   .table{
@@ -737,7 +737,15 @@ p {
     font-weight: bold;
     line-height: 1;
 }
+
 .contenido{
+  margin-top: 15% ;
+}
+
+.contenido_home{
+  margin-top: 8% ;
+}
+.contenido, .contenido_home{
 
   margin-bottom: 15%;
   margin-top: 15% ;

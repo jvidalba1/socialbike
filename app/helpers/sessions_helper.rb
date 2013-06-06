@@ -15,6 +15,11 @@ module SessionsHelper
     redirect_to(user_path(@current_user)) unless current_user?(@user)
   end
 
+  def correct_user_events
+    @event = Event.find(params[:id])
+    redirect_to(user_path(@current_user)) unless current_user?(@event.user)
+  end
+
   def sign_in(user)
     cookies.permanent.signed[:remember_token] = [user.id, user.salt]
     @current_user = user

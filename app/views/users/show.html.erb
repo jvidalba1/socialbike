@@ -44,6 +44,7 @@
   </tr>
 </table>
 
+<div class="event_and_blog">
 <table id="table_event" class="table">
   <tr>
     <td></td>
@@ -67,7 +68,9 @@
     <div class="button_group">
       <ul>
         <li><%= link_to "Ver",  event_path(event), :class => "minibutton"%></li>
+        <% if current_user?(event.user) %>
         <li><%= link_to "Editar", edit_event_path(event), :class => "minibutton" %></li>
+        <% end %>
       </ul>
     </div>
    </td>
@@ -117,6 +120,7 @@
   </tr>
 
 </table>
+</div>
 
 
 
