@@ -1,3 +1,10 @@
-== Bienvenido a SocialBike
+== Welcome to SocialBike
 
-Pagina web social para las personas que les guste montar en cicla
+This was a project for a subject called Project 2 from the [EAFIT University](http://www.eafit.edu.co) 
+(Medellín - Colombia). 
+
+The main idea was developed a social web site where the people can schedule biking events, in a future meybe
+there will be more sports.
+
+The idea is just starting :)
+
